@@ -1,0 +1,164 @@
+body,html{
+    background-color: white;
+    margin: 0;
+    height: 100%;
+}
+head,body,footer{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+*{
+    box-sizing: border-box; /*When we want to calculate in box's size the paddings and margins.*/
+}  
+.navbar-inverse{
+    padding-left: 5px;
+    display: contents;
+}
+.navbar-collapse .navbar-nav> .active > a, 
+.navbar-collapse .navbar-nav > .active > a:hover, 
+.navbar-collapse .navbar-nav > .active > a:focus {
+  background-color: transparent;
+}
+.cfirst{
+    background-color: whitesmoke;
+}
+.navbar-header{
+    position: sticky;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.navbar-header .navbar-toggle .glyphicon {
+    background-color: transparent;
+
+}
+.navbar-toggle, .glyphicon {
+    border: transparent;
+    margin-top: 8px;
+    color: black;
+}
+.navbar-toggle, .glyphicon:hover{
+    color: white;
+}
+#myNavbar .navbar-right .signin a{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    height:200px;
+}
+#myNavbar .navbar-right .signin a:hover{
+    color:white;
+}
+#myNavbar .navbar-right .signin a:link, a:visited {
+    display:block;
+    background-color: #16ac1b;
+    width: 90px;
+    text-align:center;
+    padding:6px;
+    height: 30px;
+    text-decoration:none;
+} 
+#myNavbar a{
+    color: black;
+    padding: 25px;
+    font-size: medium;
+}
+#myNavbar a:hover{
+    color: gray;
+}
+#myNavbar .active a:visited {
+    color: rgb(143, 143, 143);
+}
+.logo a{
+    margin-left: 10px;
+    margin-right: 10px;
+    float: left;
+    padding: 3px 5px;
+}
+
+em{
+    font-weight:bolder;
+    color: whitesmoke;
+    font-style:normal;
+}
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 10px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #3f3f3f;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #3f3f3f !important;
+    margin-top: 100px;
+}
+#footer h4{
+	padding-left: 10px;
+    margin-bottom: 20px;
+    color:#949494;
+}
+#footer h1{
+	padding-left: 10px;
+    margin-bottom: 20px;
+    color:#949494;
+    font-size: medium;
+}
+#footer p{
+    color:#949494;
+    
+}
+#footer a {
+    color: #949494;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#949494;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}

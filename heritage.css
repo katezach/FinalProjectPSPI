@@ -1,0 +1,78 @@
+.image-border1{
+    padding-top: 50px;
+}
+.image-border1 img{
+    height: 530px;
+}
+.image-border1 h1{
+    top: -10px;
+}
+.image-border2{
+    padding-top: 50px;
+}
+.image-border2 img{
+    height: 530px;
+}
+.image-text{
+    margin-top: 250px;
+    width: 450px;
+    text-align: right;   
+}
+.image-text p1{
+    font-size: 20px;
+    color: black;
+}
+/*Space between the 2 sentences*/
+.image-text p2{
+    font-size: 20px;
+    color: black;
+}
+.img1{
+    margin-top: 70px;
+}
+/*Definition and the text below*/
+.first-text-border h1{
+    font-size: 40px;
+    font-style: italic;
+}
+.first-text-border{
+    margin-top: 70px;
+    font-size: 20px;
+}
+.slideshow-container {
+    padding-top: 130px;
+    padding-left: 80px;
+    height: 100%;
+}
+  
+  /* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .8}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .8}
+    to {opacity: 1}
+}
+/*Protection and text below*/
+.third-text-border h1{
+    font-size: 40px;
+}
+.third-text-border{
+    height:100%;
+    padding-top: 100px;
+    font-size: 20px;
+}
+/*Change the format of the horizontal line*/
+hr{
+    border-top: 1px solid black;
+}
+

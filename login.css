@@ -1,0 +1,65 @@
+body, html {
+    height: 100%;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+  
+.bg-img {
+    /* The image used */
+    background-image: url("media/signinphoto.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display:flex; /*MUST*/
+    align-content:flex-end; /*removes scroll down*/
+    flex-wrap:wrap; /*moves text*/
+}
+  
+ /* Add styles to the form container */
+.container {
+    position: absolute;
+    max-width: 300px;
+    padding: 20px;
+    right: 50%;
+    bottom: 150px;
+    background-color: #82d18d;
+}
+  
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+  
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+  
+/* Set a style for the submit button */
+.btn {
+    background-color: #16ac1b;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.btn a{
+    text-decoration: inherit;
+    color: white;
+}
+.btn:hover {
+    opacity: 1;
+}
+.btn:hover a{
+    text-decoration: none;
+    color: inherit;
+}

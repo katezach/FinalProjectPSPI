@@ -1,0 +1,248 @@
+body,html{
+    background-color: white;
+    margin: 0;
+    height: 100%;
+}
+
+*{
+    box-sizing: border-box; /*When we want to calculate in box's size the paddings and margins.*/
+}  
+
+.bg-img {
+    background-color: rgb(193, 222, 230);
+}
+  
+#contact {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
+}
+  
+.section-header { /*Header*/
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    letter-spacing: 6px;
+    color: black;
+    font-weight: bold;
+}
+  
+.contact-wrapper {
+    margin: 0 auto;
+    padding-top: 20px;
+    position: relative;
+    max-width: 800px;
+}
+  
+.form-horizontal {/*Email form space*/
+    float: left;
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+}
+  
+.form-control, textarea { /*Email boxes-letters*/
+    max-width: 400px;
+    background-color:whitesmoke !important;
+    color:black !important;
+    letter-spacing: 1px;
+}
+
+.col-sm-12{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+  
+.send-button { /*Butoon's characteristics*/
+    margin-top: 15px;
+    height: 34px;
+    width: 400px;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+  
+.button {
+    width: 400px;
+    height: 34px;
+    transition: all .2s ease-in-out;
+}
+  
+.send-text {
+    display: block;
+    margin-top: 10px;
+    font: 700 12px 'Lato', sans-serif;
+    letter-spacing: 2px;
+}
+  
+.button:hover {
+    transform: translate3d(0px, -29px, 0px);
+}
+
+.right-side {
+    max-width: 400px;
+    float: right;
+    margin-top: 60px;
+}
+  
+.contact-list { /*Location*/
+    list-style-type: none;
+    margin-left: -30px;
+    text-align: center;
+}
+
+.list-item {
+    line-height: 4;
+    color: black;
+}
+  
+.contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color:black;
+    font-size: 20px;
+    font-weight: bold;    
+}
+  
+.place {
+    margin-left: 20px;
+}
+      
+.social-media-list { /*Social*/
+    position: relative;
+    font-size: 2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+  
+.social-media-list li a {
+    color: #fff;
+}
+  
+.social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+}
+  
+.social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+}
+  
+.social-media-list li:hover {
+    background-color: #fff; 
+}
+  
+.social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+  
+.social-media-list li:hover a {
+    color: #000;
+}
+  
+.copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color:black;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+hr {
+    border-color: rgba(255,255,255,.8); ;
+}
+
+.home{
+    max-width: 400px;
+    padding-top: 20px;
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 760px) {
+.right-side, .form-horizontal {
+    float: none;
+    margin: 5px auto;
+} 
+
+.right-side {
+    margin-top: 20px;
+    max-width: 300px;
+    text-align: center;
+    position:relative;
+} 
+    
+.social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    position:relative;
+}
+.social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    position:relative;
+}
+}
+
+@media screen and (max-width: 569px) {
+  
+.right-side, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+    position:relative;
+}  
+.form-control, textarea {
+    max-width: 340px;
+    margin: 0 auto;
+}
+    
+textarea {
+    width: 280px;
+} 
+    
+.right-side {
+    margin-top: 60px;
+    max-width: 280px;
+}  
+
+.social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+}
+.social-media-list li:after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+}
+}    
+ 
+@media screen and (max-width: 410px) {
+    .send-button {
+    width: 99%;
+    }
+}

@@ -1,0 +1,114 @@
+.image-border{
+    padding-top: 50px;
+}
+.image-border img{
+    height: 530px;
+    width: 100%;
+}
+.image-text{
+    margin-top: 250px;
+    width: 450px;
+    text-align: right;   
+}
+.image-text h1{
+    font-size: 60px;
+    font-style: italic;
+}
+.image-text h2{ /*Subtitle*/
+    font-size: 21px;
+}
+.img1{
+    margin-top: 120px;
+ 
+}
+.img1 img{
+    height:300px;
+    width:400px;
+}
+/*Definition and the text below*/
+.first-text-border h1{
+    font-size: 40px;
+}
+.first-text-border{
+    margin-top: 70px;
+    font-size: 20px;
+}
+.img2{
+    margin-top: 70px;
+}
+.img2 img{
+    height:300px;
+    width:430px;
+}
+.second-text-border{
+    margin-top: 30px;
+    font-size: 20px;
+    padding-left: 90px;
+}
+.second-text-border h1{
+    font-size: 40px;
+}
+.img3{
+    margin-top: 100px;
+}
+.img3 img{
+    height:300px;
+    width:430px;
+}
+.third-text-border{
+    margin-top: 70px;
+    font-size: 20px;
+   
+}
+.third-text-border h1{
+    font-size: 40px;
+}
+.img4{
+    margin-top: 70px;
+}
+.img4 img{
+    height:300px;
+    width:430px;
+}
+.fourth-text-border{
+    margin-top: 70px;
+    font-size: 20px;
+    padding-left: 90px;
+}
+.fourth-text-border h1{
+    font-size: 40px;
+}
+hr{
+    border-top: 1px solid black;
+}
+@media (min-width:992px) {
+    .second-text-border{
+        padding-left: 150px;
+    }
+    .fourth-text-border{
+        padding-left: 150px;
+    }
+    .first-text-border{
+        width:50%;
+    }
+    .img1 img{
+        width:480px;
+    }
+    .third-text-border{
+        width:50%;
+    }
+    .img3 img{
+        width:480px;
+    }
+}
+@media (max-width:991px){
+    .second-text-border{
+        padding-left: 15px;
+    }
+    .img1 img{
+        width:430px;
+    }
+    .fourth-text-border{
+        padding-left: 15px;
+    }
+}

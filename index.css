@@ -1,0 +1,252 @@
+body,html{
+    background-color: white;
+    margin: 0;
+    height: 100%;
+}
+
+head,body,footer{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+*{
+    box-sizing: border-box; /*When we want to calculate in box's size the paddings and margins.*/
+}  
+
+/*Entire top nav bar (logo,language,singin included)*/
+.topnav {
+    overflow:visible;
+    background-color: solid;
+    position: absolute; /* Set the navbar to absolute position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+
+/*Logo*/
+.topnav a {
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+    color: black;
+}
+
+/*Sign in (text-border format)*/
+.topnav .topnav-right a{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 14px;
+    height:200px;
+    color: black;
+}
+
+.topnav-right a:hover{
+    color:white;
+}
+
+.topnav-right a:link, a:visited {
+    display:block;
+    background-color: #16ac1b;
+    width: 90px;
+    text-align:center;
+    padding:6px;
+    height: 30px;
+    text-decoration:none;
+} 
+
+/*Container that has the background image and the text on it */
+.background-container{
+    /*Set the position and adjust picture*/
+    background-image: url("media/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display:flex; /*MUST*/
+    align-content:flex-end; /*removes scroll down*/
+    flex-wrap:wrap; /*moves text*/
+}
+
+.backtext{
+    font-weight:bold;
+    color: black;
+    font-size:40px;
+    text-shadow: 1px 1px 7px black;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding:190px 270px;
+}
+
+/*our,city*/
+.backtext p{
+    margin: 0;
+    padding:0 27% ;
+    font-weight:bolder;
+    color: whitesmoke;
+    font-style:normal;
+}
+
+/*integrated,affordable,sustainable,resilient*/
+p1{ padding: 0 3%;}
+p2{ padding: 0 9%;}
+p4{ padding:0 8%;}
+
+
+
+.slideshow-container{
+    position: relative;
+    width: 80%;
+    margin: 100px auto;
+    height: 64%;
+    background-color: #f0f0f0;
+}
+
+.mySlides{display: none;}
+img {vertical-align: middle;}
+
+.content {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0); 
+    background: rgba(0, 0, 0, 0.5); 
+    width: 100%;
+}
+
+.content .text{
+    color: white;
+    padding: 10px 20px 10px 20px;
+    font-size: 20px;
+}
+
+.header{
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 1.6s ease;
+}
+  
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+@media only screen and (max-width: 800px) {
+    .text, .header{
+      font-size: 14px;
+    }
+}
+
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 10px 0;
+}
+
+section .section-title {
+    text-align: center;
+    color: #3f3f3f;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    background: #3f3f3f !important;
+    margin-top: 100px;
+}
+#footer h4{
+	padding-left: 10px;
+    margin-bottom: 20px;
+    color:#949494;
+}
+#footer h1{
+	padding-left: 10px;
+    margin-bottom: 20px;
+    color:#949494;
+    font-size: medium;
+}
+#footer p{
+    color:#949494;
+    
+}
+#footer a {
+    color: #949494;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#949494;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+
+@media (max-width:767px){
+	#footer h5 {
+    padding-left: 0;
+    border-left: transparent;
+    padding-bottom: 0px;
+    margin-bottom: 10px;
+}
+}
+/*change emphasis font style*/
+em{
+    font-weight:bolder;
+    color: whitesmoke;
+    font-style:normal;
+}

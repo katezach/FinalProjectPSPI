@@ -1,0 +1,82 @@
+.image-text{
+    width: 450px;
+    margin-top: 250px;
+    text-align: right;  
+}
+/*Title*/
+.image-text h1{ 
+    font-size: 60px;
+    font-style: italic;
+}
+/*Subtitle*/
+.image-text h2{ 
+    font-size: 21px;
+}
+/*Category image*/
+.image-border{ 
+    padding-top: 50px;
+}
+.image-border img{
+    height:530px;
+    width:100%;
+}
+/*Side picture*/
+.image1{
+    margin-top: 100px;
+}
+/*Disabilities,Equality and text below*/
+.first-text-border{
+    margin-top: 100px;
+    font-size: 20px;
+}
+.first-text-border h1{
+    font-size: 35px;
+}
+.first-text-border h2{
+    margin-top: 50px;
+    font-size: 35px;
+    color: red;
+}
+/*Ways to solve this.*/
+.second-text-border{
+    margin-top: 100px;
+    font-size: 20px;
+    padding-left: 90px;
+}
+.second-text-border h1{
+    font-size: 40px;
+}
+hr{
+    border-top: 1px solid black;
+}
+.slideshow-container {
+    position: relative;
+    max-width: 1000px;
+    margin-top: 130px;
+}
+  
+  /* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 5s;
+    animation-name: fade;
+    animation-duration: 5s;
+}
+  
+@-webkit-keyframes fade {
+    from {opacity: .8}
+    to {opacity: 1}
+}
+  
+@keyframes fade {
+    from {opacity: .8}
+    to {opacity: 1}
+}
+@media (min-width:992px) and (max-width:1156px){
+    .first-text-border{
+        width: 50%;
+    }
+    .second-text-border{
+        padding-left: 10%;
+    }
+}
