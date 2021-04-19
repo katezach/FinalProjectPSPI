@@ -135,7 +135,7 @@ body {
     right: 20px;
     border: medium solid whitesmoke;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent whitesmoke;
+    border-color: transparent transparent transparent rgb(245, 245, 245,0.5);
 }
 
 .right::before { /*arrows to right*/
@@ -148,7 +148,7 @@ body {
     left: 20px;
     border: medium solid whitesmoke;
     border-width: 10px 10px 10px 0;
-    border-color: transparent whitesmoke transparent transparent;
+    border-color: transparent rgb(245, 245, 245,0.5) transparent transparent;
 }
 
 .right::after { /*fix the circle for right side*/

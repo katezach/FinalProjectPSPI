@@ -1,184 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <!--Title and favicon-->
-  <title>Goal City</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="media/withoutString.png">
+  <head>
+    <!--Title and favicon-->
+    <title>Goal City</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="media/withoutString.png">
 
-  <!-- Required meta tags -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!--CSS files-->
-  <link href="index.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!--Social Icons-->
-  <script src="https://kit.fontawesome.com/9832cc157c.js" crossorigin="anonymous"></script>
-</head>
+    <!--CSS files-->
+    <link href="index.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!--Social Icons-->
+    <script src="https://kit.fontawesome.com/9832cc157c.js" crossorigin="anonymous"></script>
+  </head>
 
-<body>
+  <body>
 
-  <!--Navigation Bar-->
-  <div class="topnav">
-    <a href="index.html">
-      <img src="media/logo.png" height="110px" width="100px">
-    </a>
-    <div class="topnav-right">
-      <h2><a href="signup.html">Sign up</a></h2>
-    </div>
-  </div>
-
-  <!--First main page-->
-  <div class="background-container">
-    <div class="backtext">
-      <p><em>OUR</em></p>
-      <p1>INTE<em>G</em>RATED<br></p1>
-      <p2>AFF<em>O</em>RDABLE<br></p2>
-      <p3>SUST<em>A</em>INABLE<br></p3>
-      <p4>RESI<em>L</em>IENT<br></p4>
-      <p><em>CITY</em></p>
-    </div>
-  </div>
-
-  <!--Slideshow implementation-->
-
-  <!--Photo's container-->
-  <div class="slideshow-container">
-    <!--First photo-->
-    <div class="mySlides fade">
-      <img src="media/integrated.jpeg" style="width:100%">
-      <div class="content">
-        <div class="header">INTEGRATED</div>
-        <div class="text">An integrated city is developing as a whole,
-          evolving its existing structures and
-          upgrading its services as needed
-          of its citizens. It concerns quality in health,
-          in education, transport and others,
-          aiming at the maximum productivity of its citizens.
-        </div>
+    <!--Navigation Bar-->
+    <div class="topnav">
+      <a href="index.html">
+        <img src="media/logo.png" alt="Logo" height="110px" width="100px">
+      </a>
+      <div class="topnav-right">
+        <h2><a href="signup.html">Sign up</a></h2>
       </div>
     </div>
-    <!--Second photo-->
-    <div class="mySlides fade">
-      <img src="media/affordable.jpg" style="width:100%">
-      <div class="content">
-        <div class="header">AFFORDABLE</div>
-        <div class="text">An affordable city is anthropocentrically built with purpose
-          the balance between sustainability, social justice
-          and quality of life. For this reason, the decisions obtained
-          combine smart technologies and proper management of the environment.
-        </div>
+
+    <!--First main page-->
+    <div class="background-container">
+      <div class="backtext">
+        <p><em>OUR</em></p>
+        <p1>INTE<em>G</em>RATED<br></p1>
+        <p2>AFF<em>O</em>RDABLE<br></p2>
+        <p3>SUST<em>A</em>INABLE<br></p3>
+        <p4>RESI<em>L</em>IENT<br></p4>
+        <p><em>CITY</em></p>
       </div>
     </div>
-    <!--Third photo-->
-    <div class="mySlides fade">
-      <img src="media/sustainable.jpg" style="width:100%">
-      <div class="content">
-        <div class="header">SUSTAINABLE</div>
-        <div class="text">Sustainable cities are designed with this in mind
-          social, economic and environmental impacts.
-          Their goal is to achieve economic and social
-          sustainability for all citizens and green sustainability
-          fighting the abuse of energy, water, food
-          and reducing environmental pollution.
-        </div>
-      </div>
-    </div>
-    <!--Fourth photo-->
-    <div class="mySlides fade">
-      <img src="media/resilient.jpg" style="width:100%">
-      <div class="content">
-        <div class="header">RESILIENT</div>
-        <div class="text">Resilient cities are cities that have the ability,
-          thanks to their infrastructure, to cope in the future
-          economic, social and environmental problems.
-          This is a consequence of a sustainable development that has
-          come about by prudent use of technology, environment
-          but also by the equality of all citizens.
-        </div>
-      </div>
-    </div>
-  </div>
-  <br>
-  <!--Dots-->
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-    <span class="dot" onclick="currentSlide(4)"></span>
-  </div>
 
-
-  <!--JS code for picking the correct photo-->
-  <script>
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) { slideIndex = 1 }
-      if (n < 1) { slideIndex = slides.length }
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-  </script>
-  <!--Footer-->
-  <section id="footer">
+    <!--Slideshow implementation-->
     <div class="container">
-      <div class="row text-center text-xs-center text-sm-left text-md-left">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h4>Inspiration</h4>
-          <h1>We were inspired by the eleventh goal of the UN. You can read more at this
-            <a href="https://unric.org/en/sdg-11/#top" target="_blank">link</a> .
-          </h1>
+      <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+          <!--First-->
+          <div class="item active">
+            <img src="media/integrated.jpeg" alt="Integrated city" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>INTEGRATED</h3>
+              <p>An integrated city is developing as a whole,
+                 evolving its existing structures and
+                 upgrading its services as needed
+                 of its citizens. It concerns quality in health,
+                 in education, transport and others,
+                 aiming at the maximum productivity of its citizens.
+              </p>
+            </div>
+          </div>
+          <!--Second-->
+          <div class="item">
+            <img src="media/affordable.jpg" alt="Affordable city" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>AFFORDABLE</h3>
+              <p>An affordable city is anthropocentrically built with purpose
+                 the balance between sustainability, social justice
+                 and quality of life. For this reason, the decisions obtained
+                 combine smart technologies and proper management of the environment.
+              </p>
+            </div>
+          </div>
+          <!--Third-->
+          <div class="item">
+          <img src="media/sustainable.jpg" alt="Sustainable city" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>SUSTAINABLE</h3>
+              <p>Sustainable cities are designed with this in mind
+                 social, economic and environmental impacts.
+                 Their goal is to achieve economic and social
+                 sustainability for all citizens and green sustainability
+                 fighting the abuse of energy, water, food
+                 and reducing environmental pollution.
+                </p>
+            </div>
+          </div>
+          <!--Fourth-->
+          <div class="item">
+            <img src="media/resilient.jpg" alt="Resilient city" style="width:100%;">
+            <div class="carousel-caption">
+              <h3>RESILIENT</h3>
+              <p>Resilient cities are cities that have the ability,
+                 thanks to their infrastructure, to cope in the future
+                 economic, social and environmental problems.
+                 This is a consequence of a sustainable development that has
+                 come about by prudent use of technology, environment
+                 but also by the equality of all citizens.
+                </p>
+            </div>
+          </div>
         </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h4>Contanct Us</h4>
-          <ul class="list-unstyled quick-links">
-            <li><a href="contact.html"><i class="fas fa-envelope"></i>Email:</a></li>
-            <li><a href="javascript:void();"><i class="fas fa-map-marker-alt"></i>Address: Aristotle U,GR</a></li>
-            <li><a href="#"><i class="fab fa-google"></i>Website</a></li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h4>About Us</h4>
-          <h1>We are a volunteer team from Greece. Our goal is to make a better world which will
-            provide inclusive cities safe and sustainable for each of her citizen.
-          </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-          <ul class="list-unstyled list-inline social text-center">
-            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
-          </ul>
-        </div>
-        </hr>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p class="h6">&copy 2021 PSPI.</p>
-        </div>
-        </hr>
+  
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
     </div>
-  </section>
-</body>
 
+    <!--Footer-->
+    <section id="footer">
+      <div class="container">
+        <div class="row text-center text-xs-center text-sm-left text-md-left">
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Inspiration</h4>
+            <h1>We were inspired by the eleventh goal of the UN. You can read more at this
+              <a href="https://unric.org/en/sdg-11/#top" target="_blank"><u><b>link</b></u></a> .
+            </h1>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>Contanct Us</h4>
+            <ul class="list-unstyled quick-links">
+              <li><a href="contact.html"><i class="fas fa-envelope"></i>Email:</a></li>
+              <li><a href="https://www.csd.auth.gr/en/" target="_blank"><i class="fas fa-map-marker-alt"></i>Address: Aristotle U,GR</a></li>
+              <li><a href="index.html"><i class="fab fa-google"></i>Website</a></li>
+            </ul>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4">
+            <h4>About Us</h4>
+            <h1>We are a volunteer team from Greece. Our goal is to make a better world which will
+              provide inclusive cities safe and sustainable for each of her citizen.
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
+            <ul class="list-unstyled list-inline social text-center">
+              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-facebook"></i></a></li>
+              <li class="list-inline-item"><a href="javascript:void();"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+          </div>
+          </hr>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+            <p class="h6">&copy 2021 PSPI.</p>
+          </div>
+          </hr>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>

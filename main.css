@@ -99,12 +99,13 @@ section .section-title {
 	padding-left: 10px;
     margin-bottom: 20px;
     color:#949494;
+    font-size: 20px;
 }
 #footer h1{
 	padding-left: 10px;
     margin-bottom: 20px;
     color:#949494;
-    font-size: medium;
+    font-size: 18px;
 }
 #footer p{
     color:#949494;
@@ -115,6 +116,9 @@ section .section-title {
     text-decoration: none !important;
     background-color: transparent;
     -webkit-text-decoration-skip: objects;
+}
+.list-unstyled{
+    font-size: 16px;
 }
 #footer ul.social li{
 	padding: 3px 0;
