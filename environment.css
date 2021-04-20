@@ -1,10 +1,4 @@
-.image-border{
-    padding-top: 50px;
-}
-.image-border img{
-    height: 530px;
-    width: 100%;
-}
+/*Title of category*/
 .image-text{
     margin-top: 250px;
     width: 450px;
@@ -17,11 +11,20 @@
 .image-text h2{ /*Subtitle*/
     font-size: 21px;
 }
+/*Image of category*/
+.image-border{
+    padding-top: 50px;
+}
+.image-border img{
+    height: 530px;
+    width: 100%;
+}
 /*Side picture*/
 .green{
     margin-top: 80px;
 }
 .natural_effects{
+    position: relative;
     margin-top: 60px;
     font-size: 20px;
 }
@@ -43,20 +46,24 @@ hr{
 .air_fog{
   background-image: url("media/air_pollution.jpg");
   height: 100%;
-  width: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   position: relative;
 }
+.air_fog_text{
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 20px;
+}
 .park1{
     padding-top:180px;
-    padding-left:10%;
+    padding-left:5%;
 }
 .park2{
     padding-top:180px;
-    padding-left:7%;
+    padding-left:5%;
 }
 .park3{
     padding-top:180px;
@@ -68,7 +75,6 @@ hr{
     font-size: 40px;
 }
 .water_text{
-    height:100%;
     padding-top: 100px;
     font-size: 20px;
 }
@@ -82,10 +88,25 @@ hr{
     .park1{
         padding-top:50px;
     }
-}
-@media (max-width:992px){
-     .park2 , .park3{
+    .park2 , .park3{
         padding-top: 20px;
+    }
+}
+@media (min-width:1028px) and (max-width:1416px){
+    .water_text{
+        width: 50%;
+    }
+    .water_img{
+        padding-top: 100%;
+    }
+}
+@media (min-width:993px) and (max-width:1028px){
+    .water_text{
+        width: 50%;
+    }
+    .water_img img,.water_img1 img{
+       width: 400px;
+       height: 300px;
     }
 }
 @media (min-width:2085px){
