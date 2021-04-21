@@ -1,6 +1,7 @@
 body, html {
     height: 100%;
     margin: 0;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 *{
     box-sizing: border-box;
@@ -25,9 +26,9 @@ body, html {
     padding: 20px;
     right: 50%;
     bottom: 150px;
-    background-color: #82d18d;
+    background-color: rgb(130, 209, 141, 0.8);
 }
-  
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
@@ -38,7 +39,7 @@ input[type=text], input[type=password] {
 }
   
 input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
+    background-color: #f1f1f1;
     outline: none;
 }
   
@@ -50,7 +51,7 @@ input[type=text]:focus, input[type=password]:focus {
     border: none;
     cursor: pointer;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.8;
 }
 .btn a{
     text-decoration: inherit;

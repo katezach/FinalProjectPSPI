@@ -1,7 +1,8 @@
 body, html {
     height: 100%;
     margin: 0;
-  }
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 *{
     box-sizing: border-box;
 }
@@ -18,16 +19,16 @@ body, html {
     flex-wrap:wrap; /*moves text*/
 }
   
- /* Add styles to the form container */
+/* Add styles to the form container */
 .container {
     position: absolute;
-    max-width: 300px;
+    max-width: 350px;
     padding: 20px;
     right: 50%;
     bottom: 70px;
-    background-color: #82d18d;
+    background-color: rgb(130, 209, 141, 0.8);
 }
-  
+
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
@@ -38,19 +39,20 @@ input[type=text], input[type=password] {
 }
   
 input[type=text]:focus, input[type=password]:focus {
-    background-color: #ddd;
+    background-color: #f1f1f1;
     outline: none;
 }
   
 /* Set a style for the submit button */
 .btn {
+
     background-color: #16ac1b;
     color: white;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
     width: 100%;
-    opacity: 0.9;
+    opacity: 0.8;
 }
   
 .btn:hover {
@@ -58,9 +60,13 @@ input[type=text]:focus, input[type=password]:focus {
 }
 
 h2{
-    font-size: 14px;
+    font-size: 16px;
 }
 .container a{
-    font-size: 14px;
+    font-size: 16px;
     color: black;
+}
+
+.container a:hover{
+    color: rgb(34, 32, 32);
 }
