@@ -120,3 +120,34 @@ hr{
         width:400px;
     }
 }
+@media (min-width:452px) and (max-width:519px){
+    .green img{
+        width: 80%;
+    }
+    .water_img img,.water_img1 img{
+        width: 400px;
+        height: 300px;
+    }
+}
+@media (min-width:300px) and (max-width:452px){
+    .green img{
+        width: 60%;
+    }
+    .water_img img,.water_img1 img{
+        width: 300px;
+        height: 200px;
+    }
+    .image-text{
+        width: 250px;
+        text-align: left;
+    }
+    .image-text h1{
+        font-size: 40px;
+    }
+    .image-text h2{
+        font-size: 15px;
+    }
+    .image-border img{
+        height: 250px ;
+    }
+}

@@ -80,3 +80,22 @@ hr{
         padding-left: 10%;
     }
 }
+@media (min-width:300px) and (max-width:447px){
+    .image-text{
+        width: 250px;
+        text-align: left;
+    }
+    .image-text h1{
+        font-size: 40px;
+    }
+    .image-text h2{
+        font-size: 15px;
+    }
+    .image-border img{
+        height: 250px ;
+    }
+    .mySlides img,.image1 img{
+        width: 300px;
+    }
+
+}

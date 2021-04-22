@@ -58,6 +58,11 @@ hr{
         padding-top: 250px;
     }
 }
+@media (min-width:989px) and (max-width:1055px){
+    .first-text-border,.second-text-border{
+        width: 60%;
+    }
+}
 @media (max-width:992px) {
     .three-images1, .three-images2{
         padding-top: 0px;
@@ -69,4 +74,24 @@ hr{
         padding-top: 0px;
         padding-left: 30px;
     }
+}
+@media (min-width:300px) and (max-width:453px){
+    .image-text{
+        width: 250px;
+        text-align: left;
+    }
+    .image-text h1{
+        font-size: 40px;
+    }
+    .image-text h2{
+        font-size: 15px;
+    }
+    .image-border img{
+        height: 250px ;
+    }
+    .img1 img ,.img2 img, .img3 img,.img4 img ,.img5 img, .img6 img {
+        height: 150px;
+        width: 250px;
+    }
+
 }

@@ -75,4 +75,26 @@
 hr{
     border-top: 1px solid black;
 }
-
+@media (min-width:992px) and (max-width:1293px){
+    .mySlides img{
+        width: 400px;
+    }
+}
+@media (max-width:991px){
+    .image-border1 img{
+        width: 100%;
+    }
+}
+@media (min-width:443px) and (max-width:632px){
+    .mySlides img{
+        width: 350px;
+    }
+}
+@media (max-width:443px){
+    .mySlides img{
+        width: 250px;
+    }
+    .slideshow-container{
+        padding-left: 20px;
+    }
+}
