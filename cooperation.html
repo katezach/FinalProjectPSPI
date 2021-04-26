@@ -18,7 +18,7 @@
   <script src="https://kit.fontawesome.com/9832cc157c.js" crossorigin="anonymous"></script>
 </head>
 
-<body>
+<body onload="myMove()">
   <nav class="navbar navbar-inverse">
     <div class="container-fluid cfirst">
       <div class="navbar-header">
@@ -68,9 +68,16 @@
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="signin">
-            <h2><a href="index.html">Sign Out</a></h2>
+            <button class="button" onclick="opennew()">Sign Out</button>
           </li>
         </ul>
+
+        <script>
+          function opennew(){
+            window.open("index.html", "_self");
+          }
+        </script>
+
       </div>
     </div>
   </nav>
@@ -78,14 +85,36 @@
   <div class="container-fluid">
     <div class="row no-gutters">
       <div class="image-text col-sm-3 col-lg-4">
-        <h1>Cooperation</h1>
-        <h2>“The only thing that will redeem mankind.”</h2>
+        <div id="move">
+          <h1>Cooperation</h1>
+          <h2>“The only thing that will redeem mankind.”</h2>
+        </div>
       </div>
       <div class="image-border col-sm-9 col-lg-8">
         <img src="media/unitednations.jpg"></img>
       </div>
     </div>
   </div>
+
+  <script>
+    var id = null;
+    function myMove() {
+        var elem = document.getElementById("move");
+        var pos = 0;
+
+        clearInterval(id);
+        id = setInterval(frame, 20);
+        function frame() {
+            if (pos == 65) {
+            clearInterval(id);
+            } else {
+            pos++;
+            elem.style.top = pos + 'px';
+            elem.style.left = pos + 'px';
+            }
+        }
+    }
+  </script>
 
   <div class="container">
     <div class="row">

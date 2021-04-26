@@ -16,6 +16,15 @@
 .image-border{ 
     padding-top: 50px;
 }
+/*when screen>1350px move text*/
+@media (min-width:1350px){
+    #move{
+        position: absolute;
+    }
+    .image-text{
+        position: relative;
+    }
+}
 .image-border img{
     height:530px;
     width:100%;
@@ -94,7 +103,6 @@ hr{
         width: 250px;
     }
 }
-/*new*/
 @media (min-width:1350px){
     .image-text{
         width: 430px;
@@ -108,5 +116,10 @@ hr{
 @media (min-width:746px) and (max-width:1330px){
     .image-text , .image-border{
        margin-left: 100px;
+    }
+}
+@media (min-width:1800px){
+    .container{
+        width: 1400px;
     }
 }

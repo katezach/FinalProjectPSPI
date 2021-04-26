@@ -95,3 +95,8 @@ hr{
         padding-left: 20px;
     }
 }
+@media (min-width:1800px){
+    .container{
+        width: 1400px;
+    }
+}
