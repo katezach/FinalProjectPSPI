@@ -88,6 +88,7 @@ p4{ padding:0 8%;}
     .backtext{
         font-size:60px;
     }
+    
 }
 @media (min-width:880px) and (max-width:1462px) {
     .backtext{
@@ -121,7 +122,7 @@ p4{ padding:0 8%;}
 @media (max-width:581px){
     .backtext{
         text-shadow: 1px 2px 7px white;
-        font-size:40px;
+        font-size:30px;
         left: 5px;
     }
     .backtext p{
@@ -133,6 +134,7 @@ p4{ padding:0 8%;}
         text-shadow: 1px 2px 7px black;
     }
 }
+
 
 /*Carousel*/
 /*change slide-show's width*/
