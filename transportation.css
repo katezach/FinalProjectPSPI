@@ -20,7 +20,6 @@
     height:530px;
     width:100%;
 }
-
 /*Side picture*/
 .lanes-image{
     margin-top: 100px;
@@ -33,7 +32,6 @@
 .first-text-border h1,h2{
     font-size: 35px;
 }
-
 .li1,.li2,.li3{
     font-size: 20px;
     position: relative;
@@ -124,5 +122,21 @@ hr{
     .sign img{
         width: 250px;
         height: 250px;
+    }
+}
+/*new*/
+@media (min-width:1350px){
+    .image-text{
+        width: 430px;
+    }
+}
+@media (max-width:1350px){
+    .image-text{
+        margin-top: 50px;
+    }
+}
+@media (min-width:746px) and (max-width:1330px){
+    .image-text , .image-border{
+       margin-left: 100px;
     }
 }

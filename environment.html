@@ -2,17 +2,18 @@
 <html>
 
 <head>
-  <meta charset="UTF-8">
-  <!--Right openning from other devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!--Title and favicon-->
   <title>Environment | Goal City</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="media/withoutString.png">
+  <!-- Required meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--CSS/Javascript/Jquery files-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="environment.css">
   <link rel="stylesheet" href="main.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <!--Favicon-->
-  <link rel="icon" type="image/png" sizes="32x32" href="media/withoutString.png">
   <!--Social Media Icons-->
   <script src="https://kit.fontawesome.com/9832cc157c.js" crossorigin="anonymous"></script>
 </head>
@@ -39,28 +40,25 @@
             $(document).ready(function(){
               // Add smooth scrolling to all links
               $("a").on('click', function(event) {
-            
                 // Make sure this.hash has a value before overriding default behavior
                 if (this.hash !== "") {
                   // Prevent default anchor click behavior
                   event.preventDefault();
-            
                   // Store hash
                   var hash = this.hash;
-            
                   // Using jQuery's animate() method to add smooth page scroll
                   // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                   $('html, body').animate({
                     scrollTop: $(hash).offset().top
                   }, 800, function(){
-               
                     // Add hash (#) to URL when done scrolling (default click behavior)
                     window.location.hash = hash;
                   });
                 } // End if
               });
             });
-            </script>
+          </script>
+
           <li class="dropdown">
             <a href="environment.html">Environment</a>
             <div class="dropdown-content">
@@ -68,13 +66,7 @@
               <a href="#water_pollution">Water Pollution</a>
             </div>
           </li>
-          <li class="dropdown">
-            <a href="cooperation.html">Cooperation</a>
-            <div class="dropdown-content">
-              <a href="#rural_urban">Rural and urban </a>
-              <a href="#developed_developing">Developed and developing countries</a>
-            </div>
-          </li>
+          <li><a href="cooperation.html">Cooperation</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class="signin">
@@ -87,13 +79,13 @@
 
   <div class="container-fluid">
     <div class="row no-gutters">
-        <div class="image-text col-sm-3 col-lg-4">
-            <h1>Environment</h1>
-            <h2>“What’s the use of a fine house if you haven’t got a tolerable planet to put it on.”</h2>
-        </div>
-        <div class="image-border col-sm-9 col-lg-8">
-          <img src="media/macau-photo-agency-1UJMEmi3-qw-unsplash.jpg"></img>
-        </div>
+      <div class="image-text col-sm-3 col-lg-4">
+        <h1>Environment</h1>
+        <h2>“What’s the use of a fine house if you haven’t got a tolerable planet to put it on.”</h2>
+      </div>
+      <div class="image-border col-sm-9 col-lg-8">
+        <img src="media/macau-photo-agency-1UJMEmi3-qw-unsplash.jpg"></img>
+      </div>
     </div>
   </div>
 
@@ -115,7 +107,8 @@
           polluted it puts their health and development at serious risk. <br><br>
           WHO recommends and supports the implementation of policies to reduce air pollution, including better waste
           management, the use of clean technologies and fuels for household cooking, heating and lighting to improve the
-          quality of air in homes.</p>
+          quality of air in homes.
+        </p>
       </div>
       <div class="green col-md-4">
         <img src="media/env.jpg" width="100%"></img>
@@ -243,7 +236,6 @@
       </div>
     </div>
   </section>
-
 </body>
 
 </html>

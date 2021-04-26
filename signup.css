@@ -6,7 +6,6 @@ body, html {
 *{
     box-sizing: border-box;
 }
-  
 .bg-img {
     /* The image used */
     background-image: url("media/signinphoto.jpg");
@@ -14,59 +13,99 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
-    display:flex; /*MUST*/
-    align-content:flex-end; /*removes scroll down*/
-    flex-wrap:wrap; /*moves text*/
+} 
+/*Create the box*/
+#signup {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
 }
-  
+.signup-wrapper {
+    margin: 0 auto;
+    position: relative;
+    max-width: 800px;
+} 
 /* Add styles to the form container */
-.container {
-    position: absolute;
+.form-horizontal {
+    float: left;
+    margin-top: 60px;
+    margin-left: 60px;
     max-width: 350px;
     padding: 20px;
-    right: 50%;
-    bottom: 70px;
     background-color: rgb(130, 209, 141, 0.8);
-}
-
+} 
 /* Full-width input fields */
 input[type=text], input[type=password] {
     width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+    padding: 12px;
+    margin:0 0 15px 0;
     border: none;
     background: #f1f1f1;
+    font-size: 13px;
 }
-  
 input[type=text]:focus, input[type=password]:focus {
     background-color: #f1f1f1;
     outline: none;
 }
-  
+/*overwrites*/
+label{
+    margin-bottom: 0 !important;
+    color: black ;
+}
+h2{
+    margin-top: 20px !important;
+    margin-bottom: 20px  !important;
+    color: black;
+}
+h6{
+    padding-top: 15px;
+    font-size: 16px ;
+    font-weight: bold ;
+    color: black ;
+}
+a{
+    color: black !important;
+    text-decoration: underline !important;
+}
+a:hover{
+    color: rgb(44, 44, 44) !important;
+}
 /* Set a style for the submit button */
-.btn {
-
+button {
     background-color: #16ac1b;
     color: white;
-    padding: 16px 20px;
+    padding: 14px 18px;
     border: none;
     cursor: pointer;
     width: 100%;
     opacity: 0.8;
 }
-  
-.btn:hover {
+button a{
+    text-decoration: inherit;
+    color: white;
+}
+button:hover {
     opacity: 1;
 }
-
-h2{
-    font-size: 16px;
+button:hover a{
+    text-decoration: none;
+    color: inherit;
 }
-.container a{
-    font-size: 16px;
-    color: black;
+/*Media queries*/
+@media (max-width:400px){
+    .form-horizontal{
+        margin-left: 20px;
+    }
 }
-
-.container a:hover{
-    color: rgb(34, 32, 32);
+@media (max-height:570px){
+    .form-horizontal{
+        margin-bottom: 20px;
+    }
+}
+@media (min-width:2000px){
+    .form-horizontal{
+        margin-top: 200px;
+        max-width: 500px;
+        margin-left: 100px;
+    }
 }

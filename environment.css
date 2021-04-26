@@ -90,6 +90,7 @@ hr{
     }
     .park2 , .park3{
         padding-top: 20px;
+        padding-left: 10%;
     }
 }
 @media (min-width:1028px) and (max-width:1416px){
@@ -149,5 +150,21 @@ hr{
     }
     .image-border img{
         height: 250px ;
+    }
+}
+/*new*/
+@media (min-width:1350px){
+    .image-text{
+        width: 430px;
+    }
+}
+@media (max-width:1350px){
+    .image-text{
+        margin-top: 50px;
+    }
+}
+@media (min-width:746px) and (max-width:1330px){
+    .image-text , .image-border{
+       margin-left: 100px;
     }
 }

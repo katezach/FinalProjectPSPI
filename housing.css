@@ -131,5 +131,20 @@ hr{
         width: 250px;
         height: 200px;
     }
-
+}
+/*new*/
+@media (min-width:1350px){
+    .image-text{
+        width: 430px;
+    }
+}
+@media (max-width:1350px){
+    .image-text{
+        margin-top: 50px;
+    }
+}
+@media (min-width:746px) and (max-width:1330px){
+    .image-text , .image-border{
+       margin-left: 100px;
+    }
 }

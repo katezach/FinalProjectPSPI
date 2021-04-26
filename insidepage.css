@@ -1,14 +1,12 @@
 *{
     box-sizing: border-box;
 }
-
 body {
     background-color:white;
     margin: 0;
     height:100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
 /*Entire top nav bar (logo,singin included)*/
 .topnav {
     overflow:visible;
@@ -44,7 +42,6 @@ body {
     height: 30px;
     text-decoration:none;
 } 
-
 /*Background*/
 .background-container{
     background-image: url("media/blurry.jpg");
@@ -54,17 +51,14 @@ body {
     display:flex; /*MUST*/
     flex-wrap:wrap; /*moves text*/
 }
-
 /*Timeline*/
 .boxescontent a{
     color: black;
     text-shadow: 1px 2.5px 3px gray;
 }
-
 .boxescontent a:hover{
     color: #424242;
 }
-
 .timeline h3{
     font-weight: bold;
 }
@@ -79,13 +73,11 @@ body {
 .left{
     text-align: right;
 }
-
 .timeline {
     position: relative; /*size of vertical line*/
     max-width: 1200px;
     margin: 120px auto 20px auto; /*under navbar*/
 }
-
 .timeline::after { /*characteristics of vertical line*/
     content: '';
     position: absolute;
@@ -96,14 +88,12 @@ body {
     left: 50%;
     margin-left: -3px;
 }
-
 .paragraphscontainer { /*place of box*/
     padding: 10px 30px;
     position: relative;
     background-color: inherit;
     width: 50%;
 }
-
 .paragraphscontainer::after {/*circles*/
     content: '';
     position: absolute;
@@ -116,15 +106,12 @@ body {
     border-radius: 50%;
     z-index: 1;
 }
-
 .left { /*place container to the left*/
     left: 0;
 }
-
 .right { /*place container to the right*/
     left: 50%;
 }
-
 .left::before { /*arrows to left*/
     content: " ";
     height: 0;
@@ -137,7 +124,6 @@ body {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent rgb(245, 245, 245,0.5);
 }
-
 .right::before { /*arrows to right*/
     content: " ";
     height: 0;
@@ -150,52 +136,43 @@ body {
     border-width: 10px 10px 10px 0;
     border-color: transparent rgb(245, 245, 245,0.5) transparent transparent;
 }
-
 .right::after { /*fix the circle for right side*/
     left: -16px;
 }
-
 .boxescontent { /*content*/
     padding: 10px 40px;
     background-color: rgb(245, 245, 245,0.5);
     position: relative;
     border-radius: 6px;
 }
-
 @media screen and (max-width: 600px) {
     /*place the timelime to the left*/
     .timeline::after {
     left: 31px;
-}
-    
+} 
 .paragraphscontainer {/*when in full width*/
     width: 100%;
     padding-left: 70px;
     padding-right: 25px;
 }
-    
 .paragraphscontainer::before {/*when in full arrows looks in timeline*/
     left: 60px;
     border: medium solid whitesmoke;
     border-width: 10px 10px 10px 0;
     border-color: transparent whitesmoke transparent transparent;
 }
-
 .left::after, .right::after {/*circles same spot*/
     left: 15px;
 }
-
 .right {/*when in mini screen rights behaves like left*/
     left: 0%;
     }
 }
-
 /*Footer*/
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
     padding: 10px 0;
 }
-
 section .section-title {
     text-align: center;
     color: #3f3f3f;
@@ -268,12 +245,11 @@ section .section-title {
 #footer ul.quick-links li:hover a i {
     font-weight: 700;
 }
-
 @media (max-width:767px){
 	#footer h5 {
-    padding-left: 0;
-    border-left: transparent;
-    padding-bottom: 0px;
-    margin-bottom: 10px;
-}
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
+        margin-bottom: 10px;
+    }
 }
