@@ -97,6 +97,7 @@ hr{
 @media (max-width:992px){
     .park1{
         padding-top:50px;
+        padding-left: 10%;
     }
     .park2 , .park3{
         padding-top: 20px;
@@ -107,9 +108,7 @@ hr{
     .water_text{
         width: 50%;
     }
-    .water_img{
-        padding-top: 100%;
-    }
+
 }
 @media (min-width:993px) and (max-width:1028px){
     .water_text{

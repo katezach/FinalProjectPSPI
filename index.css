@@ -87,13 +87,30 @@ p4{ padding:0 8%;}
 @media (min-width:1924px) and (max-width:2560px) {
     .backtext{
         font-size:60px;
-    }
-    
+    }   
 }
-@media (min-width:880px) and (max-width:1462px) {
+@media (min-width:1200px) and (max-width:1462px) {
     .backtext{
         text-shadow: 1px 2px 7px white;
         font-size:40px;
+        left:200px;
+        top:150px;
+    }
+    .backtext p{
+        font-weight:bolder; font-style:normal;
+        color: whitesmoke;
+        text-shadow: 1px 2px 7px black;
+    }
+    em{
+        text-shadow: 1px 2px 7px black;
+    }
+}
+@media (min-width:881px) and (max-width:1199px){
+    .backtext{
+        text-shadow: 1px 2px 7px white;
+        font-size:34px;
+        left:100px;
+        top:140px;
     }
     .backtext p{
         font-weight:bolder; font-style:normal;
@@ -107,8 +124,9 @@ p4{ padding:0 8%;}
 @media (min-width:581px) and (max-width:880px){
     .backtext{
         text-shadow: 1px 2px 7px white;
-        font-size:40px;
-        left: 250px;
+        font-size:30px;
+        left: 10px;
+        top:160px;
     }
     .backtext p{
         font-weight:bolder; font-style:normal;
@@ -124,6 +142,7 @@ p4{ padding:0 8%;}
         text-shadow: 1px 2px 7px white;
         font-size:30px;
         left: 5px;
+        top: 160px;
     }
     .backtext p{
         font-weight:bolder; font-style:normal;
@@ -134,7 +153,48 @@ p4{ padding:0 8%;}
         text-shadow: 1px 2px 7px black;
     }
 }
-
+@media (min-height:350px) and (max-height:490px){
+    .backtext{
+        text-shadow: 1px 2px 7px white;
+        font-size:30px;
+        left: 150px;
+        top: 80px;
+    }
+    .backtext p{
+        font-weight:bolder; font-style:normal;
+        color: whitesmoke;
+        text-shadow: 1px 2px 7px black;
+    }
+    em{
+        text-shadow: 1px 2px 7px black;
+    }
+}
+@media (max-height:349px){
+    .backtext{
+        text-shadow: 1px 2px 7px white;
+        font-size:20px;
+        left: 150px;
+        top: 80px;
+    }
+    .backtext p{
+        font-weight:bolder; font-style:normal;
+        color: whitesmoke;
+        text-shadow: 1px 2px 7px black;
+    }
+    em{
+        text-shadow: 1px 2px 7px black;
+    }
+}
+@media (max-height:249px){
+    .backtext{
+        visibility: hidden;
+    }
+}
+@media (max-width:310px){
+    .backtext{
+        visibility: hidden;
+    }
+}
 
 /*Carousel*/
 /*change slide-show's width*/

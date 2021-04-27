@@ -105,6 +105,11 @@ em{
     color: whitesmoke;
     font-style:normal;
 }
+@media (min-width:925px) and (max-width:990px){
+    .navbar-nav{
+        margin-left: -65px;
+    }
+}
 /*Footer*/
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {
