@@ -18,7 +18,7 @@
     <div class="bg-img">
       <section id="login">
         <div class="login-wrapper">
-          <form action="insidepage.html" class="form-horizontal" role="form">
+          <form action="insidepage.php" class="form-horizontal" role="form">
             <h2>Log in</h2>
             <label for="email"><b>Email</b></label>
             <input type="text" placeholder="Enter Email" name="email" required>

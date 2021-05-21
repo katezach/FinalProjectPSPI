@@ -35,7 +35,7 @@
                     }
                     // If same return True.
                     else{
-                        window.open('login.html', '_self');
+                        window.open('login.php', '_self');
                     }
                 }
             </script>
@@ -59,7 +59,7 @@
                         <!--<input type="submit" onclick='checkPassword(form)' class="btn" value='Sign Up' >-->
                         <button type="reset" onclick="checkPassword(form)">Sign Up</button>
 
-                        <h6>Already have an account? <a href="login.html">Log in</a></h6>
+                        <h6>Already have an account? <a href="login.php">Log in</a></h6>
                     </form>
                 </div>
             </section>    

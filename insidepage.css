@@ -206,7 +206,7 @@ section .section-title {
     -webkit-text-decoration-skip: objects;
 }
 #footer a:hover {
-    color: #bbbaba;
+    color: #525252;
 }
 #footer ul.social li{
 	padding: 3px 0;

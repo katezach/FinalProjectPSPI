@@ -35,7 +35,7 @@
 
   <script>
     function opennew(){
-      window.open("index.html", "_self");
+      window.open("index.php", "_self");
     }
   </script>
 
@@ -44,87 +44,46 @@
     <div class="timeline">
       <div class="paragraphscontainer left">
         <div class="boxescontent">
-          <h2><a href="housing.html">HOUSING</a></h2>
+          <h2><a href="housing.php">HOUSING</a></h2>
           <p>The resilient of buildings and living conditions determine the pace of sustainable development of a city.
           </p>
         </div>
       </div>
       <div class="paragraphscontainer right">
         <div class="boxescontent">
-          <h3><a href="transportation.html">TRANSPORTATION</a></h3>
+          <h3><a href="transportation.php">TRANSPORTATION</a></h3>
           <p>The viability of a city is not defined if everything does not move in the right direction at the right
             pace.</p>
         </div>
       </div>
       <div class="paragraphscontainer left">
         <div class="boxescontent">
-          <h2><a href="accessibility.html">ACCESIBILITY</a></h2>
+          <h2><a href="accessibility.php">ACCESIBILITY</a></h2>
           <p>If the city itself excludes her citizens from her development it will never become sustainable.</p>
         </div>
       </div>
       <div class="paragraphscontainer right">
         <div class="boxescontent">
-          <h3><a href="heritage.html">HERITAGE</a></h3>
+          <h3><a href="heritage.php">HERITAGE</a></h3>
           <p>A city will never be able to promote sustainability without first highlighting its heritage.</p>
         </div>
       </div>
       <div class="paragraphscontainer left">
         <div class="boxescontent">
-          <h2><a href="environment.html">ENVIRONMENT</a></h2>
+          <h2><a href="environment.php">ENVIRONMENT</a></h2>
           <p>No sustainability matters unless we first ensure a healthy lifestyle in cities.</p>
         </div>
       </div>
       <div class="paragraphscontainer right">
         <div class="boxescontent">
-          <h3><a href="cooperation.html">COOPERATION</a></h3>
+          <h3><a href="cooperation.php">COOPERATION</a></h3>
           <p>In life no one has succeeded alone.</p>
         </div>
       </div>
     </div>
   </div>
-
-  <!--Footer -->
-  <section id="footer">
-    <div class="container">
-      <div class="row text-center text-xs-center text-sm-left text-md-left">
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h4>Inspiration</h4>
-          <h1>We were inspired by the eleventh goal of the UN. You can read more at this
-            <a href="https://unric.org/en/sdg-11/#top" target="_blank"><u><b>link</b></u></a> .
-          </h1>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h4><a href="contact.html">Contact Us</a></h4>
-          <ul class="list-unstyled quick-links">
-            <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fas fa-envelope"></i>Email: ourgoalcity@gmail.com</a></li>
-            <li><a href="https://www.csd.auth.gr/en/" target="_blank"><i class="fas fa-map-marker-alt"></i>Address: Aristotle U,GR</a></li>
-            <li><a href="index.html"><i class="fab fa-google"></i>Website</a></li>
-          </ul>
-        </div>
-        <div class="col-xs-12 col-sm-4 col-md-4">
-          <h4>About Us</h4>
-          <h1>We are a volunteer team from Greece. Our goal is to make a better world which will
-            provide inclusive cities safe and sustainable for each of her citizen.
-          </h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-5">
-          <ul class="list-unstyled list-inline social text-center">
-            <li class="list-inline-item"><a href="https://www.facebook.com/goalcityPSPI" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a href="https://www.instagram.com/our.goalcity/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-          </ul>
-        </div>
-        </hr>
-      </div>
-      <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
-          <p class="h6">&copy 2021 PSPI.</p>
-        </div>
-        </hr>
-      </div>
-    </div>
-  </section>
+  
+  <?php include('footer.php') ?>
 
 </body>
 

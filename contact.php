@@ -81,7 +81,7 @@
             <!--Copyright-->
             <div class="copyright">&#169 2021. PSPI.</div>
             <!--Return home-->
-            <div class="home"><a href="index.html">PRESS HERE TO RETURN TO THE HOME PAGE</a></div>
+            <div class="home"><a href="index.php">PRESS HERE TO RETURN TO THE HOME PAGE</a></div>
           </div>
         </div>
       </section> 
