@@ -19,68 +19,8 @@
 </head>
 
 <body onload="myMove()">
-  <nav class="navbar navbar-inverse">
-    <div class="container-fluid cfirst">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
-        </button>
-        <div class="logo">
-          <a href="insidepage.html"><img src="media/logo.png" height="70px" width="60px"></a>
-        </div>
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-          <li><a href="housing.html">Housing</a></li>
-          <li><a href="transportation.html">Transportation</a></li>
-          <li><a href="accessibility.html">Accessibility</a></li>
-          <li><a href="heritage.html">Heritage</a></li>
-          <script>
-            $(document).ready(function(){
-              // Add smooth scrolling to all links
-              $("a").on('click', function(event) {           
-                // Make sure this.hash has a value before overriding default behavior
-                if (this.hash !== "") {
-                  // Prevent default anchor click behavior
-                  event.preventDefault();
-                  // Store hash
-                  var hash = this.hash;
-                  // Using jQuery's animate() method to add smooth page scroll
-                  // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-                  $('html, body').animate({
-                  scrollTop: $(hash).offset().top
-                  }, 800, function(){
-                    // Add hash (#) to URL when done scrolling (default click behavior)
-                    window.location.hash = hash;
-                  });
-                } // End if
-              });
-            });
-          </script>
-          <li><a href="environment.html">Environment</a></li>
-          <li class="dropdown">
-            <a href="cooperation.html">Cooperation</a>
-            <div class="dropdown-content">
-              <a href="#rural_urban">Rural and Urban </a>
-              <a href="#developed_developing">Developed and Developing countries</a>
-            </div>
-          </li>       
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li class="signin">
-            <button class="button" onclick="opennew()">Sign Out</button>
-          </li>
-        </ul>
 
-        <script>
-          function opennew(){
-            window.open("index.html", "_self");
-          }
-        </script>
-
-      </div>
-    </div>
-  </nav>
+  <?php include('navbar.php') ?>
 
   <div class="container-fluid">
     <div class="row no-gutters">

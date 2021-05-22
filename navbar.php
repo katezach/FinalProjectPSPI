@@ -46,7 +46,7 @@
           <?php 
             if($cur == 'FinalProjectPSPI/environment.php'){
             include('fun.php');
-            echo '<li class="dropdown">;
+            echo '<li class="dropdown">
                   <a href="environment.php">Environment</a>
                   <div class="dropdown-content">
                     <a href="#air_pollution">Air Pollution</a>
