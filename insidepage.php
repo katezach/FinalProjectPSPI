@@ -25,7 +25,7 @@
 <body>
   <!--Navigation Bar-->
   <div class="topnav">
-    <a href="insidepage.html">
+    <a href="insidepage.php">
       <img src="media/logo.png" alt="Logo" height="110px" width="100px">
     </a>
     <div class="topnav-right">

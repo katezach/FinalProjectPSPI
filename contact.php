@@ -80,8 +80,19 @@
             <hr>
             <!--Copyright-->
             <div class="copyright">&#169 2021. PSPI.</div>
+
             <!--Return home-->
-            <div class="home"><a href="index.php">PRESS HERE TO RETURN TO THE HOME PAGE</a></div>
+            <?php 
+              $uri = $_SERVER['HTTP_REFERER'];
+              $cur = basename(parse_url($uri, PHP_URL_PATH));
+            ?>
+            <?php 
+                if ($cur == 'index.php')
+                  echo '<div class="home"><a href="index.php">PRESS HERE TO RETURN TO THE HOME PAGE</a></div>' ;
+                else
+                  echo '<div class="home"><a href="insidepage.php">PRESS HERE TO RETURN TO THE HOME PAGE</a></div>' ;
+            ?>
+            
           </div>
         </div>
       </section> 
