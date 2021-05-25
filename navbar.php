@@ -1,6 +1,6 @@
 <?php 
   $uri = $_SERVER["REQUEST_URI"];
-  $cur = substr($uri,strpos($uri,"/")+1);
+  $cur = basename(parse_url($uri, PHP_URL_PATH));
 ?>
 
 <nav class="navbar navbar-inverse">
@@ -16,35 +16,35 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <?php 
-            if($cur == 'FinalProjectPSPI/housing.php')
+            if($cur == 'housing.php')
               echo '<li class="active"><a href="housing.php">Housing</a></li>';
             else
               echo '<li><a href="housing.php">Housing</a></li>';
           ?>
 
           <?php 
-            if($cur == 'FinalProjectPSPI/transportation.php')
+            if($cur == 'transportation.php')
               echo '<li class="active"><a href="transportation.php">Transportation</a></li>';
             else
               echo '<li><a href="transportation.php">Transportation</a></li>';
           ?>
           
           <?php 
-            if($cur == 'FinalProjectPSPI/accessibility.php')
+            if($cur == 'accessibility.php')
               echo '<li class="active"><a href="accessibility.php">Accessibility</a></li>';
             else
               echo '<li><a href="accessibility.php">Accessibility</a></li>';
           ?>
           
           <?php 
-            if($cur == 'FinalProjectPSPI/heritage.php')
+            if($cur == 'heritage.php')
               echo '<li class="active"><a href="heritage.php">Heritage</a></li>';
             else
               echo '<li><a href="heritage.php">Heritage</a></li>';
           ?>
           
           <?php 
-            if($cur == 'FinalProjectPSPI/environment.php'){
+            if($cur == 'environment.php'){
             include('fun.php');
             echo '<li class="dropdown">
                   <a href="environment.php">Environment</a>
@@ -58,7 +58,7 @@
           ?>
 
           <?php 
-            if($cur == 'FinalProjectPSPI/cooperation.php'){
+            if($cur == 'cooperation.php'){
             include('fun.php');
             echo '<li class="dropdown">
                   <a href="cooperation.php">Cooperation</a>
