@@ -16,32 +16,10 @@
 
     <body>
         <div class="bg-img">
-            <script>
-                // Function to check Whether both passwords
-                // is same or not.
-                function checkPassword(form) {
-                    p = form.psw.value;
-                    p1 = form.psw1.value;
-                    // If password not entered
-                    if (p == '')
-                        alert ("Please enter Password");   
-                    // If confirm password not entered
-                    else if (p1 == '')
-                        alert ("Please enter confirm password");   
-                    // If Not same return False.    
-                    else if (p != p1) {
-                        alert ("\nPassword did not match: Please try again...")
-                        return false;
-                    }
-                    // If same return True.
-                    else{
-                        window.open('login.php', '_self');
-                    }
-                }
-            </script>
+
             <section id="signup">
                 <div class="signup-wrapper">
-                    <form action='javascript:void(0)' id='register' class="form-horizontal" role="form">
+                    <form action="register.php" id='register' class="form-horizontal" method="post">
                         <h2><b>Sign Up</b></h2>
         
                         <label for="username"><b>Username</b></label>
@@ -55,9 +33,8 @@
         
                         <label for="psw"><b>Verify Password</b></label>
                         <input type="password" placeholder="Re-enter your password" name="psw1" required>
-                    
-                        <!--<input type="submit" onclick='checkPassword(form)' class="btn" value='Sign Up' >-->
-                        <button type="reset" onclick="checkPassword(form)">Sign Up</button>
+                
+                        <button type="submit" id="reg" name="reg">Sign Up</button>
 
                         <h6>Already have an account? <a href="login.php">Log in</a></h6>
                     </form>

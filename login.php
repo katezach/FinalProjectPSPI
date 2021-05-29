@@ -18,13 +18,16 @@
     <div class="bg-img">
       <section id="login">
         <div class="login-wrapper">
-          <form action="insidepage.php" class="form-horizontal" role="form">
+          <form action="certify.php" class="form-horizontal" role="form" method="post" >
             <h2>Log in</h2>
-            <label for="email"><b>Email</b></label>
-            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="username"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
             <label for="psw"><b>Password</b></label>
             <input type="password" placeholder="Enter Password" name="psw" required>
-            <button type="submit">Log in</button>
+
+            <button type="submit" id="log" name="log">Log in</button>
           </form>
         </div>
       </section>
