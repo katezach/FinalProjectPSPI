@@ -15,9 +15,10 @@
     
         if($num == 0){
             echo '<script>alert("Login failed! Invalid username or password. Please try again !")</script>';
-            include('login.php');
+            echo "<script> location.href='login.php'; </script>";
+            exit;
         }else{
-            include('insidepage.php');
+            echo "<script> location.href='insidepage.php'; </script>";
         }
 
         mysqli_close($link);

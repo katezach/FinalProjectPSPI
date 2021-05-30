@@ -23,10 +23,10 @@
             <div class="contact-wrapper"> <!--Content-->
             <!--Email form-->
             <form action="insert_database.php" id="contact-form" class="form-horizontal" method="post">
-                <!--USERNAME-->
+                <!--EMAIL-->
                 <div class="form-group">
                     <div class="col-sm-12">
-                        <input type="text" class="form-control" id="username" placeholder="USERNAME" name="username" value="" required>
+                        <input type="text" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
                     </div>
                 </div>
                 <!--SUBJECT-->
