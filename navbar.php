@@ -1,6 +1,6 @@
 <?php 
   $uri = $_SERVER["REQUEST_URI"];
-  $cur = basename(parse_url($uri, PHP_URL_PATH));
+  $cur = substr($uri,strpos($uri,"/")+1);
 ?>
 
 <nav class="navbar navbar-inverse">
@@ -15,39 +15,38 @@
       </div>
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
-          <?php 
-            if($cur == 'housing.php')
-              echo '<li class="active"><a href="housing.php">Housing</a></li>';
+        <?php     
+            if($cur == 'FinalProjectPSPI/housing.php')
+              echo '<li class="active"><a>Housing</a></li>';
             else
               echo '<li><a href="housing.php">Housing</a></li>';
           ?>
 
           <?php 
-            if($cur == 'transportation.php')
-              echo '<li class="active"><a href="transportation.php">Transportation</a></li>';
+            if($cur == 'FinalProjectPSPI/transportation.php')
+              echo '<li class="active"><a>Transportation</a></li>';
             else
               echo '<li><a href="transportation.php">Transportation</a></li>';
           ?>
           
           <?php 
-            if($cur == 'accessibility.php')
-              echo '<li class="active"><a href="accessibility.php">Accessibility</a></li>';
+            if($cur == 'FinalProjectPSPI/accessibility.php')
+              echo '<li class="active"><a>Accessibility</a></li>';
             else
               echo '<li><a href="accessibility.php">Accessibility</a></li>';
           ?>
           
           <?php 
-            if($cur == 'heritage.php')
-              echo '<li class="active"><a href="heritage.php">Heritage</a></li>';
+            if($cur == 'FinalProjectPSPI/heritage.php')
+              echo '<li class="active"><a>Heritage</a></li>';
             else
               echo '<li><a href="heritage.php">Heritage</a></li>';
           ?>
           
           <?php 
-            if($cur == 'environment.php'){
+            if($cur == 'FinalProjectPSPI/environment.php'){
             include('fun.php');
-            echo '<li class="dropdown">
-                  <a href="environment.php">Environment</a>
+            echo '<li class="dropdown"><a>Environment</a>
                   <div class="dropdown-content">
                     <a href="#air_pollution">Air Pollution</a>
                     <a href="#water_pollution">Water Pollution</a>
@@ -58,10 +57,9 @@
           ?>
 
           <?php 
-            if($cur == 'cooperation.php'){
+            if($cur == 'FinalProjectPSPI/cooperation.php'){
             include('fun.php');
-            echo '<li class="dropdown">
-                  <a href="cooperation.php">Cooperation</a>
+            echo '<li class="dropdown"><a>Cooperation</a>
                   <div class="dropdown-content">
                     <a href="#rural_urban">Rural and Urban </a>
                     <a href="#developed_developing">Developed and Developing countries</a>
@@ -69,6 +67,16 @@
                   </li>' ;
             }else
               echo '<li><a href="cooperation.php">Cooperation</a></li>';
+          ?>
+          <?php 
+          include('fun.php');
+          echo '<li class="dropdown"><a>Extra Activities</a>
+                <div class="dropdown-content">
+                  <a href="quiz.php">Quiz</a>
+                  <a href="volunteer.php">Volunteering</a>
+                </div>
+                </li>' ;
+          
           ?>
 
         </ul>

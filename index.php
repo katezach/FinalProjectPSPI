@@ -23,14 +23,23 @@
       <a href="index.php">
         <img src="media/logo.png" alt="Logo" height="110px" width="100px">
       </a>
+
+      <div class="topnav-middle">
+        <button class="button" onclick="openlog()">Log In</button>
+      </div>
+      
       <div class="topnav-right">
-        <button class="button" onclick="opennew()">Sign Up</button>
+        <button class="button" onclick="opensig()">Sign Up</button>
       </div>
     </div>
 
     <script>
-      function opennew(){
+      function opensig(){
         window.open("signup.php", "_self");
+      }
+
+      function openlog(){
+        window.open("login.php", "_self");
       }
     </script>
 

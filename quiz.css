@@ -1,0 +1,11 @@
+input[type='radio'] { 
+    transform: scale(1.5); 
+}
+label{
+    font-weight:normal;
+    margin-left:10px;
+    font-size:24px;
+}
+.btn{
+    font-size: 20px;
+}

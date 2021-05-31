@@ -10,7 +10,7 @@
         exit();
     }
 
-    $result=@mysqli_select_db($link,'mydb');
+    $result=@mysqli_select_db($link,'pspi');
 
     if(!$result){
         echo '<p>Error selecting the database table you requested.<br>Try again.</p>';
