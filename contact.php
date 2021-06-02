@@ -52,17 +52,17 @@
             <div class="right-side">
                 <!--Location-->
                 <ul class="contact-list">
-                <li class="list-i8tem"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Aristotle U,GR</span></i></li> 
+                <li class="list-item"><i class="fa fa-map-marker fa-2x"><span class="contact-text place">Aristotle U,GR</span></i></li> 
                 </ul>
                 <hr>
                 <!--Social-->
                 <ul class="social-media-list">
-                <li><a href="https://www.facebook.com/goalcityPSPI" target="_blank" class="contact-icon">
-                    <i class="fab fa-facebook-f" aria-hidden="true"></i></a>
-                </li>
-                <li><a href="https://www.instagram.com/our.goalcity/" target="_blank" class="contact-icon">
-                    <i class="fa fa-instagram" aria-hidden="true"></i></a>
-                </li>
+                <a href="https://www.facebook.com/goalcityPSPI" target="_blank" class="contact-icon">
+                <li><i class="fab fa-facebook-f" aria-hidden="true"></i></li></a>
+                
+                <a href="https://www.instagram.com/our.goalcity/" target="_blank" class="contact-icon">
+                <li><i class="fa fa-instagram" aria-hidden="true"></i></li></a>
+                
                 </ul>
                 <hr>
                 <!--Copyright-->

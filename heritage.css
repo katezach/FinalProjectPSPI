@@ -1,31 +1,8 @@
-.image-border1{
+.image-border1,.image-border2{
     padding-top: 50px;
 }
-.image-border1 img{
+.image-border1 img,.image-border2 img{
     height: 530px;
-}
-.image-border1 h1{
-    top: -10px;
-}
-.image-border2{
-    padding-top: 50px;
-}
-.image-border2 img{
-    height: 530px;
-}
-.image-text{
-    margin-top: 250px;
-    width: 450px;
-    text-align: right;   
-}
-.image-text p1{
-    font-size: 20px;
-    color: black;
-}
-/*Space between the 2 sentences*/
-.image-text p2{
-    font-size: 20px;
-    color: black;
 }
 .img1{
     margin-top: 70px;

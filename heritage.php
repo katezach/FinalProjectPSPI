@@ -26,11 +26,11 @@
     <div class="row">
       <div class="image-border1 col-md-6">
         <img src="media/erin-doering-oLBg62NxirI-unsplash.jpg" alt="Fontana di Trevi" width="105%"></img>
-        <h1>Cultural Heritage</h1>
+        <h1 style="margin-top: -50px;margin-left: 15px;">Cultural Heritage</h1>
       </div>
       <div class="image-border2 col-md-6">
         <img src="media/frank-mckenna-4V8JxijgZ_c-unsplash.jpg" alt="Sunset" width="100%"></img>
-        <h1>Natural Heritage</h1>
+        <h1 style="margin-top: -50px;margin-left: 62%;color:white">Natural Heritage</h1>
       </div>
     </div>
   </div>
@@ -85,9 +85,7 @@
           ways:
           <ul>
             <li>Chemical maintenance, ie the preventive work regarding the measurement of chemicals, helps to reduce
-              the
-              rate
-              of decomposition and wear of exposed materials.
+              the rate of decomposition and wear of exposed materials.
             </li>
             <li>Structural conservation, ie preventive work on ways to improve and stabilize structures while
               maintaining

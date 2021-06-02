@@ -76,7 +76,7 @@
     function cardDesign($imageurl,$title,$text,$link){
     echo "<div class='col-sm-2 col-md-2 col-lg-8 card'>"."<img class='card-img-top' src='media/$imageurl' alt='Card image cap'>".
     "<div class='card-body'>"."<h5 class='card-title'>$title</h5>"."<p class='card-text'>$text</p>".
-    "<a href='$link' class='btn btn-primary'>Volunteer here</a>".
+    "<a href='$link' target='_blank' class='btn btn-primary'>Volunteer here</a>".
     "</div></div>";
     }
   ?>

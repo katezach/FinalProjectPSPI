@@ -130,6 +130,7 @@ body,html{
     line-height: 60px;
     border-radius: 50%;
     opacity: 0;
+    color: black;
     box-shadow: 0 0 0 1px #fff;
     transition: all .2s ease-in-out;
 }
@@ -137,7 +138,7 @@ body,html{
     background-color: #fff; 
 }
 .social-media-list li:hover:after {
-    opacity: 1;  
+    opacity: 1;
     transform: scale(1.12);
     transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
 }  

@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php session_start(); 
-include "SQL_connection.php";
-?>
+include "SQL_connection.php"; ?>
 <head>
         <!--Title and favicon-->
         <title>Quiz | Goal City</title>
@@ -13,7 +12,9 @@ include "SQL_connection.php";
         <!--CSS/Javascript/Jquery files-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="main.css">
-        <link rel="stylesheet" href="quiz.css">
+        <style>
+            .btn{ font-size: 20px;}
+        </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <!--Social Media Icons-->
@@ -49,21 +50,20 @@ include "SQL_connection.php";
                     if(($correct/$total_que)*100>=50)
                         echo "<h1 style='justify-content:center; text-align:center;'>Great job!</h1><br>";
                     else
-                    echo "<h1 style='justify-content:center; text-align:center;'>Maybe you should try again!</h1><br>";
-                ?>
+                    echo "<h1 style='justify-content:center; text-align:center;'>Maybe you should try again!</h1><br>";?>
             </div>
         </div>
         <div class="row" style="margin-top:50px;">
             <div class="col-md-12" style="min-height:50px; padding:15px;justify-content:center; text-align:center;">
                 <div class="col-lg-12" text-center>
-                    <input type="button" class="btn btn-success" value="Try again" onclick="load_total();">&nbsp;
+                    <input type="button" class="btn btn-success" value="Try again with a new quiz" onclick="load_total();">&nbsp;
                     <input type="button" class="btn submit" value="Done" onclick="submit();">&nbsp;
                 </div>
             </div>
         </div>
     </div>
     <?php 
-        mysqli_query($link,"INSERT INTO scores (Username,Score,accounts_idaccounts) VALUES ('$_SESSION[$username]','$correct / $total_que ','1')");
+        mysqli_query($link,"INSERT INTO scores (Username,Score,accounts_idaccounts) VALUES ('------','$correct / $total_que ','1')");
     ?>
     <?php include('footer.php');?>
     <script type="text/javascript">
@@ -71,7 +71,7 @@ include "SQL_connection.php";
         function load_total()
         {
             window.location="quiz.php";
-        }
+        }  
         function submit(){
             //Transfer to profile.php
             window.location="quiz.php";

@@ -1,33 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" href="quiz.css"> 
+    <style>
+    input[type='radio'] { transform: scale(1.5);}
+    label{
+        font-weight:normal;
+        margin-left:10px;
+        font-size:24px;
+    }
+    .btn{font-size: 20px;}
+    </style>
 </head>
 <?php
     session_start();
     include "SQL_connection.php";
     $question_no="";
     $question="";
-    $ans1="";
-    $ans2="";
-    $ans3="";
-    $ans4="";
-    $answer="";
+    $ans1=""; $ans2=""; $ans3=""; $ans4="";
     $counter=0;
     $ans="";
-    $points=0;
-
-    $queno=$_GET["questionno"];
-
-    if(isset($_SESSION["answer"][$queno])){
-        $ans=$_SESSION["answer"][$queno];
+    
+    
+    /* Gives ans the chosen value */
+    if(isset($_SESSION["answer"][$_GET["qid"]])){
+        $ans=$_SESSION["answer"][$_GET["qid"]];
     }
 
-    $query = "SELECT * FROM quiz WHERE idquiz=$_GET[questionno]"; 
+    $query = "SELECT * FROM quiz WHERE idquiz='$_GET[qid]'"; 
     $result=mysqli_query($link,$query);
     $counter=mysqli_num_rows($result); 
-    
 
+    /* Until all rows of db are read, counter will be !=0 */
     if($counter==0){
         return "done";
     }
@@ -43,35 +46,36 @@
     }
 ?>
 <body>
-
-    <div style="font-size:30px;padding-left:65px;padding-top:60px;" colspan="2">
-    <?php echo "<i>Question ".$question_no.".</i> <br><br> ".$question?></div>
-
+    
+    <div style="font-size:30px;padding-left:65px;padding-top:60px;" >
+    <?php echo "<i>Question ".$question_no.".</i><br><br>".$question?></div>
+    <hr style='border-top: 0.2px solid whitesmoke;'>
+    
     <table>
         <tr><td style="padding-right:65px;padding-left:65px;padding-top:35px;">
         <!--Takes the value of radio button clicked (different for each answer) and
         returns "checked" from selectedAns. -->
             <input type="radio" name="rl" id="rl" value="<?php echo $ans1;?>" 
             onclick="radioclick(this.value,<?php echo $question_no?>)"
-            <?php selectedAns($ans,$ans1) ?> ><label><?php echo $ans1; ?></label><br>
+            <?php selectedAns($ans,$ans1) ?>><label><?php echo $ans1; ?></label><br>
 
             <input type="radio" name="rl" id="rl" value="<?php echo $ans2;?>" 
             onclick="radioclick(this.value,<?php echo $question_no?>)"
-            <?php selectedAns($ans,$ans2) ?> ><label><?php echo $ans2; ?></label><br>
+            <?php selectedAns($ans,$ans2) ?>><label><?php echo $ans2; ?></label><br>
 
             <input type="radio" name="rl" id="rl" value="<?php echo $ans3;?>" 
             onclick="radioclick(this.value,<?php echo $question_no?>)"
-            <?php selectedAns($ans,$ans3) ?> ><label><?php echo $ans3; ?></label><br>
+            <?php selectedAns($ans,$ans3) ?>><label><?php echo $ans3; ?></label><br>
 
             <input type="radio" name="rl" id="rl" value="<?php echo $ans4;?>" 
             onclick="radioclick(this.value,<?php echo $question_no?>)"
-            <?php selectedAns($ans,$ans4) ?> ><label><?php echo $ans4; ?></label><br>
-
+            <?php selectedAns($ans,$ans4) ?>><label><?php echo $ans4; ?></label><br>
         </td></tr>
-    </table>
+    </table> 
 </body>
 </html>
 <?php
+/* Keep radio button enabled. */
     function selectedAns($ans,$given_ans){
     if($ans==$given_ans)
         echo "checked";
