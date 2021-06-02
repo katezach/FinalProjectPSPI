@@ -7,7 +7,8 @@ body {
     height:100%;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-/*Entire top nav bar (logo,singin included)*/
+
+/*Entire top nav bar */
 .topnav {
     overflow:visible;
     background-color: solid;
@@ -21,27 +22,48 @@ body {
     padding: 14px 16px;
     text-decoration: none;
 }
-/*Button format*/
+
+/*Dropdown menu*/
 .topnav .topnav-right {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 150px;
 }
-.button {
-    background-color: #4CAF50;
-    border: none;
+.topnav .topnav-right .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.topnav .topnav-right .dropdown-content a {
     color: black;
-    padding: 10px 20px;
-    text-align: center;
+    padding: 12px 16px;
     text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: whitesmoke;}
+.dropdown-content {display: block;}
+.dropbtn {background-color: gray;}
+
+/*Username button*/
+.btn-primary {
+    background-color: rgba(12, 141, 29, 0.8) !important;
+    color: white !important;
+    margin: 5px !important;
+    padding: 16px !important;
+    font-size: 16px !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+.topnav .topnav-right .dropdown-username {
+    position: absolute;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
 }
-.button:hover{
-    color: white;
-}
+.topnav .topnav-right .dropdown-username a:hover {background-color: #ddd;}
+.show {display: block;}
+
 /*Background*/
 .background-container{
     background-image: url("media/blurry.jpg");
@@ -51,6 +73,7 @@ body {
     display:flex; /*MUST*/
     flex-wrap:wrap; /*moves text*/
 }
+
 /*Timeline*/
 .boxescontent a{
     color: black;
@@ -168,6 +191,7 @@ body {
     left: 0%;
     }
 }
+
 /*Footer*/
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 section {

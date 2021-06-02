@@ -1,0 +1,187 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color:white;
+    margin: 0;
+    height:100%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/***********TOPNAV*********************/
+.topnav {
+    overflow:visible;
+    background-color: solid;
+    position: absolute; /* Set the navbar to absolute position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
+}
+/*Logo*/
+.topnav a {
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+h1 {
+    margin: 4px 2px;
+    margin-top: 5%;
+    margin-right: 10%;
+    text-align: center;
+}
+
+/*Dropdown menu*/
+.topnav .topnav-right {
+    position: absolute;
+    top: 10px;
+    right: 150px;
+}
+.topnav .topnav-right .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.topnav .topnav-right .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: whitesmoke;}
+.dropdown-content {display: block;}
+.dropbtn {background-color: gray;}
+
+/*Username button*/
+.btn-primary {
+    background-color: rgba(12, 141, 29, 0.8) !important;
+    color: white !important;
+    margin: 5px !important;
+    padding: 16px !important;
+    font-size: 16px !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+.topnav .topnav-right .dropdown-username {
+    position: absolute;
+    display: inline-block;
+}
+.topnav .topnav-right .dropdown-username a:hover {background-color: #ddd;}
+.topnav .topnav-right .show {display: block;}
+
+label{
+    font-weight:normal;
+    margin-left:10px;
+    font-size:24px;
+}
+
+/******************COLLAPSED LIST******************/
+.collapsible {
+    max-width: 70%;
+    margin-left: 15%;
+    width: 100%;
+    background-color: rgb(29, 23, 53);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 18px;
+}
+.active, .collapsible:hover {
+    background-color: rgb(48, 39, 87);
+}
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212";
+}
+.content {
+    max-width: 70%;
+    margin-left: 15%;
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: rgb(193, 222, 230);
+}
+
+/*************EDIT FORM*****************/
+.edit-wrapper{
+    width: 70% ;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.edit-wrapper .row{
+    margin-top: 20px;
+}
+
+/* Set a style for the submit button */
+.edit-wrapper button {
+    background-color: #0c62d1;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    margin-top: 10px !important;
+    margin-bottom: 10px;
+    padding-top: 10px ;
+    padding-bottom: 10px;
+    padding-right: 0px;
+    padding-left: 0px;
+    opacity: 0.8;
+}
+.edit-wrapper button a{
+    text-decoration: inherit;
+    color: white;
+}
+.edit-wrapper button:hover {
+    opacity: 1;
+}
+.edit-wrapper button:hover a{
+    text-decoration: none;
+    color: inherit;
+}
+.edit-wrapper h6{
+    margin-top: 20px ;
+    font-size: 12px;
+}
+
+/*Media queries*/
+@media (max-width:425px){
+    .edit-wrapper button{
+        width: 30%;
+    }
+}
+@media (max-width:385px){
+    .edit-wrapper label b{
+        font-size: 12px !important;
+    }
+}
+@media (max-width:300px){
+    .edit-wrapper .row .col{
+        flex-basis:unset ;
+    }
+    .edit-wrapper .col{
+        margin-bottom: 10px;
+    }
+    .edit-wrapper button{
+        width: 50%;
+    }
+}
+
+/*****************MAILBOX*****************/
+.mailbox-wrapper{
+    width: 50% ;
+    margin-top: 5%;
+    margin-left: 10%;
+}

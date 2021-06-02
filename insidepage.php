@@ -23,21 +23,46 @@
 </head>
 
 <body>
+
+  <?php session_start(); ?>
+
   <!--Navigation Bar-->
   <div class="topnav">
     <a href="insidepage.php">
       <img src="media/logo.png" alt="Logo" height="110px" width="100px">
     </a>
     <div class="topnav-right">
-      <button class="button" onclick="opennew()">Sign Out</button>
+      <div class="dropdown-username">
+        <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user']; ?></button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="profile.php">My Profile</a>
+          <a href="index.php">Log out</a>
+        </div>
+      </div>
+
+      <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('.dropbtn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content-username");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+      </script>   
     </div>
   </div>
-
-  <script>
-    function opennew(){
-      window.open("index.php", "_self");
-    }
-  </script>
 
   <div class="background-container">
     <!--Timeline-->

@@ -1,13 +1,15 @@
 <?php 
     
+    session_start();
     include('SQL_connection.php'); 
 
     if (isset($_POST['log'])){
     
         $username = $_POST['username'];  
+        $_SESSION['user'] = $username;
+
         $psw = $_POST['psw']; 
              
-    
         $query = "SELECT * from accounts where Username='$username' and Mypassword='$psw' ";
         $result = mysqli_query($link,$query);
     
