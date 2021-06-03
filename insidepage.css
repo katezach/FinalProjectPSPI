@@ -34,12 +34,19 @@ body {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 120px;
+    overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.topnav .topnav-right .dropdown-content a {
+ .topnav-right .dropdown-username .dropdown-content #profile  {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 28.8px;
+    text-decoration: none;
+    display: block;
+}
+.topnav-right .dropdown-username .dropdown-content #logout  {
+    color: black;
+    padding: 12px 36.6px;
     text-decoration: none;
     display: block;
 }

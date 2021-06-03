@@ -35,8 +35,8 @@
       <div class="dropdown-username">
         <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user']; ?></button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="profile.php">My Profile</a>
-          <a href="index.php">Log out</a>
+          <a id="profile" href="profile.php">My Profile</a>
+          <a id="logout" href="index.php">Log out</a>
         </div>
       </div>
 

@@ -44,9 +44,15 @@ h1 {
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.topnav .topnav-right .dropdown-content a {
+.topnav-right .dropdown-username .dropdown-content #profile  {
     color: black;
-    padding: 12px 16px;
+    padding: 12px 21.6px;
+    text-decoration: none;
+    display: block;
+}
+.topnav-right .dropdown-username .dropdown-content #logout  {
+    color: black;
+    padding: 12px 30.4px;
     text-decoration: none;
     display: block;
 }
@@ -180,8 +186,21 @@ label{
 }
 
 /*****************MAILBOX*****************/
-.mailbox-wrapper{
-    width: 50% ;
+.mailbox-wrapper #load_mails{
+    width: 30% ;
     margin-top: 5%;
     margin-left: 10%;
+}
+@media (max-width:385px){
+    .mailbox-wrapper label td{
+        font-size: 12px !important;
+    }
+}
+@media (max-width:300px){
+    .mailbox-wrapper .row .col{
+        flex-basis:unset ;
+    }
+    .mailbox-wrapper .col{
+        margin-bottom: 10px;
+    }
 }
