@@ -94,12 +94,12 @@ button:hover a{
 /*Media queries*/
 @media (max-width:400px){
     .form-horizontal{
-        margin-left: 20px;
+        margin-left: 0px;
     }
 }
-@media (max-height:570px){
+@media (max-width:540px){
     .form-horizontal{
-        margin-bottom: 20px;
+        margin-top: 10px;
     }
 }
 @media (min-width:2000px){

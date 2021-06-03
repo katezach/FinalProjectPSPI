@@ -80,9 +80,17 @@ button:hover a{
     color: inherit;
 }
 /*Media queries*/
-@media (max-height:600px){
+
+@media (max-width:430px){
     .form-horizontal{
-        margin-top: 40px;
+        margin-top: 80px;
+        margin-left: 0px;
+    }
+}
+@media (min-width:430px) and (max-width:530px){
+    .form-horizontal{
+        margin-top: 200px;
+        margin-left: 0px;
     }
 }
 @media (min-width:2000px){

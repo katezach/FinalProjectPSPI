@@ -19,28 +19,28 @@
       <ul class="nav navbar-nav">
         <?php     
           if($cur == 'FinalProjectPSPI/housing.php')
-            echo '<li class="active"><a>Housing</a></li>';
+            echo '<li><a style = "color: grey;">Housing</a></li>';
           else
             echo '<li><a href="housing.php">Housing</a></li>';
         ?>
 
         <?php 
           if($cur == 'FinalProjectPSPI/transportation.php')
-            echo '<li class="active"><a>Transportation</a></li>';
+            echo '<li><a style = "color: grey;">Transportation</a></li>';
           else
             echo '<li><a href="transportation.php">Transportation</a></li>';
         ?>
         
         <?php 
           if($cur == 'FinalProjectPSPI/accessibility.php')
-            echo '<li class="active"><a>Accessibility</a></li>';
+            echo '<li><a style = "color: grey;">Accessibility</a></li>';
           else
             echo '<li><a href="accessibility.php">Accessibility</a></li>';
         ?>
         
         <?php 
           if($cur == 'FinalProjectPSPI/heritage.php')
-            echo '<li class="active"><a>Heritage</a></li>';
+            echo '<li><a style = "color: grey;">Heritage</a></li>';
           else
             echo '<li><a href="heritage.php">Heritage</a></li>';
         ?>
@@ -48,7 +48,7 @@
         <?php 
           if($cur == 'FinalProjectPSPI/environment.php'){
           include('fun.php');
-          echo '<li class="dropdown"><a>Environment</a>
+          echo '<li class="dropdown"><a style = "color: grey;">Environment</a>
                 <div class="dropdown-content">
                   <a href="#air_pollution">Air Pollution</a>
                   <a href="#water_pollution">Water Pollution</a>
@@ -61,7 +61,7 @@
         <?php 
           if($cur == 'FinalProjectPSPI/cooperation.php'){
           include('fun.php');
-          echo '<li class="dropdown"><a>Cooperation</a>
+          echo '<li class="dropdown"><a style = "color: grey;">Cooperation</a>
                 <div class="dropdown-content">
                   <a href="#rural_urban">Rural and Urban </a>
                   <a href="#developed_developing">Developed and Developing countries</a>
@@ -72,13 +72,23 @@
         ?>
 
         <?php 
-          echo '<li class="dropdown"><a>Extra Activities</a>
+          if($cur == 'FinalProjectPSPI/quiz.php' || $cur == 'FinalProjectPSPI/volunteer.php' ){
+          echo '<li class="dropdown"><a style = "color: grey;">Extra Activities</a>
                 <div class="dropdown-content">
                   <a href="quiz.php">Quiz</a>
                   <a href="volunteer.php">Volunteering</a>
                 </div>
                 </li>' ;
+          }else{
+            echo '<li class="dropdown"><a>Extra Activities</a>
+            <div class="dropdown-content">
+              <a href="quiz.php">Quiz</a>
+              <a href="volunteer.php">Volunteering</a>
+            </div>
+            </li>' ;
+          }
         ?>
+        
       </ul>
 
       <div class="dropdown-username">
