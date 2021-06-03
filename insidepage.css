@@ -46,7 +46,7 @@ body {
 }
 .topnav-right .dropdown-username .dropdown-content #logout  {
     color: black;
-    padding: 12px 36.6px;
+    padding: 12px 36px;
     text-decoration: none;
     display: block;
 }
