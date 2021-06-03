@@ -120,9 +120,25 @@ em{
     color: whitesmoke;
     font-style:normal;
 }
-@media (min-width:925px) and (max-width:990px){
+
+/*Media queries*/
+@media (min-width:980px) and (max-width:1160px){
     .navbar-nav{
-        margin-left: -65px;
+        float: left;
+        margin-top: 60px !important;
+        margin-left: -110px !important;
+    }
+}
+@media (max-width:767px){
+    /*button username*/
+    #myNavbar .navbar-right .signin{
+        top:100px;
+    }
+}
+@media (max-width:768px){
+    .dropdown-username{
+        top: 7px !important;
+        right:100px !important;
     }
 }
 
@@ -212,9 +228,5 @@ section .section-title {
         border-left: transparent;
         padding-bottom: 0px;
         margin-bottom: 10px;
-    }
-    /*button sign out*/
-    #myNavbar .navbar-right .signin{
-        top:100px;
     }
 }

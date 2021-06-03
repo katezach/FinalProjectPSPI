@@ -20,9 +20,30 @@
     .card {margin-left: 100px; margin-top: 100px; width:240px;height:410px;  border: 1.5px solid black; border-radius: 5%; box-shadow: 10px 10px 18px #888888;}
     .card-img-top{margin-top:10px;margin-left:2%;width: 200px;height: 200px;}
     .card-body{margin-left:10px;}
-    .btn-primary{margin-left:10px;margin-right:20px;width:80%;}
+    .btn-success{margin-left:10px;margin-right:20px;width:80%;}
     h5   {color: black; font-size: 25px;}
     p    {color: black;}
+    
+    @media (max-width:280px){
+        .row{
+            margin-left: -100px;
+        }
+    }
+    @media (min-width:450px) and (max-width:800px){
+        .row{
+            margin-left: 70px;
+        }
+    }
+    @media (min-width:993px) and (max-width:1020px){
+        .row{
+            margin-left: 70px;
+        }
+    }
+    @media (min-width:1230px) and (max-width:1500px){
+        .row{
+            margin-left: 120px;
+        }
+    }
     @media (min-width:300px) and (max-width:640px){
         .card{
             margin-left: 15%; margin-top: 30px; 
@@ -45,7 +66,7 @@
         }
         h5{font-size: 30px;}
         p{font-size: 20px;}
-        .btn-primary{margin-top:10%;margin-left:0px;width: 90%;font-size: 24px;}
+        .btn-success{margin-top:10%;margin-left:0px;width: 90%;font-size: 24px;}
     }
 
 </style>
@@ -76,7 +97,7 @@
     function cardDesign($imageurl,$title,$text,$link){
     echo "<div class='col-sm-2 col-md-2 col-lg-8 card'>"."<img class='card-img-top' src='media/$imageurl' alt='Card image cap'>".
     "<div class='card-body'>"."<h5 class='card-title'>$title</h5>"."<p class='card-text'>$text</p>".
-    "<a href='$link' target='_blank' class='btn btn-primary'>Volunteer here</a>".
+    "<a href='$link' target='_blank' class='btn btn-success'>Volunteer here</a>".
     "</div></div>";
     }
   ?>
