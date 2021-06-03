@@ -12,7 +12,7 @@
     </style>
 </head>
 <?php
-
+    session_start();
     include "SQL_connection.php";
     $question_no="";
     $question="";
