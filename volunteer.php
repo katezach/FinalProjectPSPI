@@ -80,7 +80,7 @@
                 "Contributions to W.H.C. are used for projects implemented by experts to protect World Heritage sites around the world.",
                 "Protecting people from fossil fuel pollution and toxic chemicals, and make communities, oceans and ecosystems more resilient.",
                 "Do you want to help countries in crisis? You can do that by donating to the United Nations or its agencies.<br>",
-                "Improving access to affordable transportation and promote sustainable development abroad by donating bicycles or bicycle parts");
+                "Accessing affordable transportation and promote sustainable development abroad by donating bicycles or bicycle parts.");
     $links=array("https://cities4all.org/","https://www.habitat.org/emea","https://whc.unesco.org/en/donation/",
     "https://membership.onlineaction.org/site/Donation2?df_id=19421&19421.donation=form1&addl_info=nav-button",
     "https://www.un.org/en/about-us/how-to-donate-to-the-un-system","https://org.salsalabs.com/o/411/donate_page/bikesfortheworld");

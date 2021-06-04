@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php session_start(); 
+<?php 
 include "SQL_connection.php"; ?>
 <head>
         <!--Title and favicon-->

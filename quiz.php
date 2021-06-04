@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-    <?php session_start();?>
     <head>
         <!--Title and favicon-->
         <title>Quiz | Goal City</title>
