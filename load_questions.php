@@ -26,7 +26,7 @@
         $ans=$_SESSION["answer"][$_GET["qid"]];
     }
 
-    $query = "SELECT * FROM quiz WHERE idquiz='$_GET[qid]'"; 
+    $query = "SELECT * FROM quiz1 WHERE idquiz='$_GET[qid]'"; 
     $result=mysqli_query($link,$query);
     $counter=mysqli_num_rows($result); 
 

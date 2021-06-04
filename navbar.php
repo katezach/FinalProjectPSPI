@@ -74,15 +74,29 @@
         <?php 
           if($cur == 'FinalProjectPSPI/quiz.php' || $cur == 'FinalProjectPSPI/volunteer.php' ){
           echo '<li class="dropdown"><a style = "color: grey;">Extra Activities</a>
-                <div class="dropdown-content">
-                  <a href="quiz.php">Quiz</a>
-                  <a href="volunteer.php">Volunteering</a>
-                </div>
-                </li>' ;
+            <div class="dropdown-content">
+              <a>Take a quiz<i class="fas fa-caret-down" style="float:right;margin-left:10px;margin-top:5%"></i></a>
+              <div class="dropdown-forextra">
+              <ul>
+                <li><a href="quiz.php">Quiz 1</a></li>
+                <li><a href="#">Quiz 2</a></li>
+                <li><a href="#">Quiz 3</a></li>
+              </ul>
+              </div>
+              <a href="volunteer.php">Volunteering</a>
+            </div>
+            </li>' ;
           }else{
             echo '<li class="dropdown"><a>Extra Activities</a>
             <div class="dropdown-content">
-              <a href="quiz.php">Quiz</a>
+              <a>Take a quiz<i class="fas fa-caret-down" style="float:right;margin-left:10px;margin-top:5%"></i></a>
+              <div class="dropdown-forextra">
+              <ul>
+                <li><a href="quiz.php">Quiz 1</a></li>
+                <li><a href="#">Quiz 2</a></li>
+                <li><a href="#">Quiz 3</a></li>
+              </ul>
+              </div>
               <a href="volunteer.php">Volunteering</a>
             </div>
             </li>' ;

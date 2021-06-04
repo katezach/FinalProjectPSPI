@@ -1,4 +1,4 @@
-<!--Returns -->
+<!--Returns the selected answer -->
 <?php
 session_start();
 $qid=$_GET["qid"];

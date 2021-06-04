@@ -25,13 +25,13 @@ include "SQL_connection.php"; ?>
 <?php include('navbar.php');?>
 <?php 
     $correct=0;
-    $total_que=10; 
+    $total_que=9; 
 
     if(isset($_SESSION["answer"])){
         for($i=1;$i<=sizeof($_SESSION["answer"]);$i++)
         {
             $answer="";
-            $result=mysqli_query($link,"SELECT idquiz,CorrectAnswer FROM quiz WHERE idquiz=$i");
+            $result=mysqli_query($link,"SELECT idquiz,CorrectAnswer FROM quiz1 WHERE idquiz=$i");
             while($row=mysqli_fetch_array($result))
                 $answer=$row["CorrectAnswer"];
             if (isset($_SESSION["answer"][$i])){

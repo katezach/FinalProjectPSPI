@@ -47,7 +47,7 @@
 
         <script type="text/javascript">
             function load_total(){
-                document.getElementById("total_que").innerHTML=10;
+                document.getElementById("total_que").innerHTML=9;
             }
             var qid="1";
             load_questions(qid);
