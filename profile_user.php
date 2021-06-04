@@ -3,7 +3,7 @@
   <?php session_start(); ?>
   <head>
   <!--Title and favicon-->
-  <title>Profile | Goal City</title>
+    <title>Profile | Goal City</title>
     <link rel="icon" type="image/png" sizes="32x32" href="media/withoutString.png">
 
     <!-- Required meta tags -->
@@ -18,6 +18,9 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!--Social Media Icons-->
+    <script src="https://kit.fontawesome.com/9832cc157c.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -32,6 +35,9 @@
           <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user']; ?></button>
           <div id="myDropdown" class="dropdown-content">
             <a id="profile">My Profile</a>
+            <a id="home" href="insidepage.php">Home</a>
+            <a id="quiz" href="quiz.php">Quiz</a>
+            <a id="volun" href="volunteer.php">Volunteer</a>
             <a id ="logout" href="index.php">Log out</a>
           </div>
         </div>
@@ -60,12 +66,12 @@
       </div>
     </div>
 
-    <h1>Welcome <?php echo $_SESSION['user']; ?> ! </h1>
-    <br>
     <hr>
-
+    <h1>Welcome <?php echo $_SESSION['user'];?> ! </h1>
+    <br>
+    
     <!--First Collapsed list-->
-    <button class="collapsible" style="margin-top:180px;"><i>Edit your account</i></button>
+    <button class="collapsible" style="margin-top:20px;"><i>Edit your account</i></button>
     <div class="content">
       <div class="edit-wrapper">
         <form action="edit.php" method="post">
@@ -101,8 +107,8 @@
     <!--Second Collapsed list-->
     <button class="collapsible"><i>Show webpage's mailbox</i></button>
     <div class="content">
-      <div class="mailbox-wrapper">
-        <div class="row">
+      <div class="mailbox-wrapper ">
+        <div class="row" >
           <div class="col-md-12" id="load_mails"></div>
         </div>
       </div>
@@ -116,7 +122,7 @@
               document.getElementById("load_mails").innerHTML=xmlhttp.responseText;
             }
           };
-          xmlhttp.open("GET","load_mails.php",true);
+          xmlhttp.open("GET","load_mails_user.php",true);
           xmlhttp.send(null);
         }
         load_mailbox();
@@ -124,9 +130,28 @@
     </div>
 
     <!--Third Collapsed list-->
-    <button class="collapsible"><i>Delete an account</i></button>
+    <button class="collapsible"><i>Delete your account</i></button>
     <div class="content">
-      
+      <div class="delete-wrapper">
+          <div class="row">
+            <div class="col-md-12" id="delete_mails"></div>
+          </div>
+        </div>
+
+        <script type="text/javascript">
+        function delete_mails()
+        {
+          var xmlhttp=new XMLHttpRequest();
+          xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+              document.getElementById("delete_mails").innerHTML=xmlhttp.responseText;
+            }
+          };
+          xmlhttp.open("GET","delete_account_user.php",true);
+          xmlhttp.send(null);
+        }
+        delete_mails();
+      </script>
     </div>
 
     <script>
@@ -145,5 +170,47 @@
             });
         }
     </script>
+
+    <!--Footer-->
+    <section id="footer">
+      <footer class="footer">
+        <div class="container bottom_border">
+          <div class="row">
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <h4>Inspiration</h4>
+              <h1>We were inspired by the eleventh goal of the UN. You can read more at this
+                <a href="https://unric.org/en/sdg-11/#top" target="_blank"><u><b>link</b></u></a> .
+              </h1>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-4">
+              <h4>Contact Us</h4>
+              <ul class="list-unstyled quick-links">
+                <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fas fa-envelope"></i>Email: ourgoalcity@gmail.com</a></li>
+                <li><a href="https://www.csd.auth.gr/en/" target="_blank"><i class="fas fa-map-marker-alt"></i>Address: Aristotle U,GR</a></li>
+                <li><a href="index.php"><i class="fab fa-google"></i>Website</a></li>
+              </ul>
+            </div>
+            <div class=" col-xs-12 col-sm-4 col-md-4">
+              <h4>About Us</h4>
+              <h1>We are a volunteer team from Greece. Our goal is to make a better world which will
+                provide inclusive cities safe and sustainable for each of her citizen.
+              </h1>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <ul class="list-unstyled list-inline social text-center">
+            <li class="list-inline-item"><a href="https://www.facebook.com/goalcityPSPI" target="_blank"><i class="fa fa-facebook"></i></a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com/our.goalcity/" target="_blank"><i class="fa fa-instagram"></i></a></li>
+          </ul>
+          </hr>
+          <div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
+              <h6>&copy 2021 PSPI.<h6>
+          </div>
+          </hr>
+        </div>
+      </footer>
+    </section>
+
   </body>
 </html>

@@ -106,9 +106,9 @@
       </ul>
 
       <div class="dropdown-username">
-        <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user']; ?></button>
+        <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user'] , '<i class="fas fa-caret-down" style="float:right;margin-left:10px;margin-top:5px"></i>' ;  ?></button>
         <div id="myDropdown" class="dropdown-content">
-          <a href="profile.php">My Profile</a>
+          <a href="general_profile.php">My Profile</a>
           <a href="index.php">Log out</a>
         </div>
       </div>

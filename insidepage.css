@@ -33,20 +33,20 @@ body {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 120px;
+    max-width: 120px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
  .topnav-right .dropdown-username .dropdown-content #profile  {
     color: black;
-    padding: 12px 28.8px;
+    padding: 12px 27px;
     text-decoration: none;
     display: block;
 }
 .topnav-right .dropdown-username .dropdown-content #logout  {
     color: black;
-    padding: 12px 36px;
+    padding: 12px 34px;
     text-decoration: none;
     display: block;
 }
@@ -67,6 +67,7 @@ body {
 .topnav .topnav-right .dropdown-username {
     position: absolute;
     display: inline-block;
+    margin-left: -20px;
 }
 .topnav .topnav-right .dropdown-username a:hover {background-color: #ddd;}
 .show {display: block;}

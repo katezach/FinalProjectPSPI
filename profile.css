@@ -23,13 +23,6 @@ body {
     text-decoration: none;
 }
 
-h1 {
-    margin: 4px 2px;
-    margin-top: 5%;
-    margin-right: 10%;
-    text-align: center;
-}
-
 /*Dropdown menu*/
 .topnav .topnav-right {
     position: absolute;
@@ -40,19 +33,37 @@ h1 {
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 120px;
+    max-width: 120px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
 .topnav-right .dropdown-username .dropdown-content #profile  {
     color: black;
-    padding: 12px 21.6px;
+    padding: 12px 21px;
     text-decoration: none;
     display: block;
 }
 .topnav-right .dropdown-username .dropdown-content #logout  {
     color: black;
-    padding: 12px 30.4px;
+    padding: 12px 30px;
+    text-decoration: none;
+    display: block;
+}
+.topnav-right .dropdown-username .dropdown-content #home  {
+    color: black;
+    padding: 12px 37px;
+    text-decoration: none;
+    display: block;
+}
+.topnav-right .dropdown-username .dropdown-content #quiz  {
+    color: black;
+    padding: 12px 42px;
+    text-decoration: none;
+    display: block;
+}
+.topnav-right .dropdown-username .dropdown-content #volun  {
+    color: black;
+    padding: 12px 23px;
     text-decoration: none;
     display: block;
 }
@@ -64,7 +75,8 @@ h1 {
 .btn-primary {
     background-color: rgba(12, 141, 29, 0.8) !important;
     color: white !important;
-    margin: 5px !important;
+    margin: 5px ;
+    margin-left: -10% !important;
     padding: 16px !important;
     font-size: 16px !important;
     border: none !important;
@@ -73,14 +85,32 @@ h1 {
 .topnav .topnav-right .dropdown-username {
     position: absolute;
     display: inline-block;
+    margin-left: -20px;
+}
+@media (max-width:320){
+    .topnav .topnav-right .dropdown-username{
+        margin-left: 10px;
+    }
 }
 .topnav .topnav-right .dropdown-username a:hover {background-color: #ddd;}
 .topnav .topnav-right .show {display: block;}
 
-label{
-    font-weight:normal;
-    margin-left:10px;
-    font-size:24px;
+hr{
+    margin-top: 140px !important;
+}
+
+/*******************WELCOME************************/
+h1{
+    font-family: 'Brush Script MT', cursive;
+    margin: 4px ;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 80px;
+}
+@media (max-width:590px){
+    h1{
+        font-size: 60px;
+    }
 }
 
 /******************COLLAPSED LIST******************/
@@ -161,46 +191,205 @@ label{
     margin-top: 20px ;
     font-size: 12px;
 }
+label{
+    font-weight:normal;
+    margin-left:10px;
+    font-size:20px;
+}
 
 /*Media queries*/
-@media (max-width:425px){
-    .edit-wrapper button{
-        width: 30%;
+@media (max-width:850px){
+    .col{
+        flex-basis: unset;
     }
 }
-@media (max-width:385px){
-    .edit-wrapper label b{
-        font-size: 12px !important;
-    }
-}
-@media (max-width:300px){
-    .edit-wrapper .row .col{
-        flex-basis:unset ;
-    }
-    .edit-wrapper .col{
-        margin-bottom: 10px;
-    }
+@media (max-width: 700px){
     .edit-wrapper button{
-        width: 50%;
+        width: 60%;
     }
 }
 
 /*****************MAILBOX*****************/
-.mailbox-wrapper #load_mails{
-    width: 30% ;
-    margin-top: 5%;
+.mailbox-wrapper {
+    width: 70% ;
     margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
-@media (max-width:385px){
-    .mailbox-wrapper label td{
+@media (min-width:680px) and (max-width:950px){
+    .mailbox-wrapper label{
         font-size: 12px !important;
     }
 }
-@media (max-width:300px){
-    .mailbox-wrapper .row .col{
-        flex-basis:unset ;
+@media (min-width:705px) and (max-width:680px){
+    .mailbox-wrapper{
+        margin-left: 2%;
+        width: 10%;
     }
-    .mailbox-wrapper .col{
+    .mailbox-wrapper label{
+        max-width: 10%;
+        font-size: 12px !important;
+    }
+}
+@media (max-width:705px) {
+    table, thead, tbody, th, td, tr { 
+		display: block; 
+        color: #333; 
+        font-weight: bold; 
+	}
+    thead tr { 
+		position: absolute;
+         
+		top: -9999px;
+		left: -9999px;
+	}
+    tr { border: 1px solid #ccc;
+        border-bottom: 1px solid #200;}
+	
+	td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 30%; 
+	}
+	td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}
+@media (max-width:470px){
+    label{
+        margin-left: -10px !important;
+        font-size: 10px !important;
+    }
+}
+@media (max-width:325px){
+    label{
+        margin-left: -10px !important;
+        font-size: 8px !important;
+    }
+}
+
+/**************DELETE ACCOUNT*************/
+.delete-wrapper{
+    width: 70% ;
+    margin-left: 10%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.delete-wrapper .row{
+    margin-top: 20px;
+}
+@media (min-width:705px) and (max-width:860px){
+    .delete-wrapper{
+        margin-left: -20px;
+        width: 10%;
+    }
+    .delete-wrapper label{
+        max-width: 10%;
+        font-size: 12px !important;
+    }
+}
+
+/************************FOOTER********************/
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+section {
+    padding: 10px 0;
+}
+section .section-title {
+    text-align: center;
+    color: #3f3f3f;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+#footer {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background: #3f3f3f !important;
+    margin-top: 100px;
+}
+#footer h4{
+	padding-left: 10px;
+    margin-bottom: 20px;
+    color:#949494;
+    font-size: 20px;
+    text-align: center;
+}
+#footer h1{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	padding-left: 10px;
+    margin-bottom: 20px;
+    color:#949494;
+    font-size: 18px;
+}
+#footer p{
+    color:#949494;   
+}
+#footer h6{
+    font-size: 12px;
+    color:#949494;   
+}
+#footer a {
+    color: #949494;
+    text-decoration: none !important;
+    background-color: transparent;
+    -webkit-text-decoration-skip: objects;
+}
+#footer a:hover {
+    color: #bbbaba;
+}
+.list-unstyled{
+    font-size: 16px;
+    text-align: center;
+}
+#footer ul.social li{
+	padding: 3px 0;
+}
+#footer ul.social li a i {
+    margin-right: 5px;
+	font-size:25px;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.social li:hover a i {
+	font-size:30px;
+}
+#footer ul.social li a,
+#footer ul.quick-links li a{
+	color:#949494;
+}
+#footer ul.social li a:hover{
+	color:#eeeeee;
+}
+#footer ul.quick-links li{
+	padding: 3px 0;
+	-webkit-transition: .5s all ease;
+	-moz-transition: .5s all ease;
+	transition: .5s all ease;
+}
+#footer ul.quick-links li:hover{
+	padding: 3px 0;
+	margin-left:5px;
+	font-weight:700;
+}
+#footer ul.quick-links li a i{
+	margin-right: 5px;
+}
+#footer ul.quick-links li:hover a i {
+    font-weight: 700;
+}
+@media (max-width:767px){
+	#footer h5 {
+        padding-left: 0;
+        border-left: transparent;
+        padding-bottom: 0px;
         margin-bottom: 10px;
     }
 }

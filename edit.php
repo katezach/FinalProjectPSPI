@@ -50,29 +50,29 @@
                             echo "<script> location.href='login.php'; </script>";   
                         }else{
                             echo '<script>alert("Passwords did not match. Please try again !")</script>';
-                            echo "<script> location.href='profile.php'; </script>";
+                            echo "<script> location.href='general_profile.php'; </script>";
                             exit;
                         }
                     }else{
     
                         echo '<script>alert("This email allready exists, please use an other.")</script>';
-                        echo "<script> location.href='profile.php'; </script>";
+                        echo "<script> location.href='general_profile.php'; </script>";
                         exit;
                     }
                 }else{
                     echo '<script>alert("Invalid email format. Please try again !")</script>';
-                    echo "<script> location.href='profile.php'; </script>";
+                    echo "<script> location.href='general_profile.php'; </script>";
                     exit;
                 }    
             }else{
     
                 echo '<script>alert("This username allready exists, please use an other.")</script>';
-                echo "<script> location.href='profile.php'; </script>";
+                echo "<script> location.href='general_profile.php'; </script>";
                 exit;
             }
         }else{
             echo '<script>alert("Your profile has nothing to update!")</script>';
-            echo "<script> location.href='profile.php'; </script>";
+            echo "<script> location.href='general_profile.php'; </script>";
         }
         
         mysqli_close($link);
