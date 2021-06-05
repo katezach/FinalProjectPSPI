@@ -37,12 +37,17 @@
                 while($row = mysqli_fetch_array($result)){
                     $mail=$row['Email'];
                     $username=$row['Username'];
-                    $admin=$row['isadmin'];
+                    $admin=$row['Admin'];
                     echo '<tr>
                     <td> <label style = "font-size:14px;">'; echo $counter; echo '</label></td>';
                     echo '<td> <label style = "font-size:14px;">'; echo $mail; echo '</label></td>';
                     echo '<td> <label style = "font-size:14px;">'; echo $username; echo '</label></td>';
-                    echo '<td> <label style = "font-size:14px;">'; echo $admin; echo '</label></td>';
+
+                    if($admin==1){
+                    echo '<td> <label style = "font-size:14px;">'; echo 'true'; echo '</label></td>';
+                    }else{
+                    echo '<td> <label style = "font-size:14px;">'; echo 'false'; echo '</label></td>';  
+                    }
                     echo '<td> <a href="delete_function.php?username=';  echo $username; echo' ">Delete</a></td>
                     </tr>' ;
                     $counter= $counter +1;

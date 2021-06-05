@@ -105,7 +105,7 @@
     </div>
 
     <!--Second Collapsed list-->
-    <button class="collapsible"><i>Show webpage's mailbox</i></button>
+    <button class="collapsible"><i>Show your mailbox</i></button>
     <div class="content">
       <div class="mailbox-wrapper ">
         <div class="row" >
