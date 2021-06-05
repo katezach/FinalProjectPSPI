@@ -183,7 +183,7 @@
               </h1>
             </div>
             <div class="col-xs-12 col-sm-4 col-md-4">
-              <h4>Contact Us</h4>
+              <h4><a href="contact.php">Contact Us</a></h4>
               <ul class="list-unstyled quick-links">
                 <li><a href="https://mail.google.com/mail/u/0/#inbox" target="_blank"><i class="fas fa-envelope"></i>Email: ourgoalcity@gmail.com</a></li>
                 <li><a href="https://www.csd.auth.gr/en/" target="_blank"><i class="fas fa-map-marker-alt"></i>Address: Aristotle U,GR</a></li>

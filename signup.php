@@ -18,7 +18,7 @@
         <div class="bg-img">
             <section id="signup">
                 <a href="index.php">
-                    <img src="media/logo.png" alt="Logo" height="110px" width="110px" style="float: left; padding: 14px 16px; text-decoration: none; background-color: white;">
+                    <img src="media/logo.png" alt="Logo" height="80px" width="80px" style="float: left; padding: 14px 16px; text-decoration: none; background-color: white;">
                 </a>
                 <div class="signup-wrapper">
                     <form action="register.php" id='register' class="form-horizontal" method="post">

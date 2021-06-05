@@ -53,7 +53,9 @@
         else{
             echo 'There are no emails yet !';
         }
-        ?>
+        
+        mysqli_close($link);
+    ?>
     
 </table>
 </body>

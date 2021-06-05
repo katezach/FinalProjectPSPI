@@ -18,7 +18,7 @@
     <div class="bg-img">
       <section id="login">
         <a href="index.php">
-            <img src="media/logo.png" alt="Logo" height="110px" width="110px" style="float: left; padding: 14px 16px; text-decoration: none; background-color: white;">
+            <img src="media/logo.png" alt="Logo" height="80px" width="80px" style="float: left; padding: 14px 16px; text-decoration: none; background-color: white;">
         </a>
         <div class="login-wrapper">
           <form action="certify.php" class="form-horizontal" role="form" method="post" >
@@ -31,6 +31,8 @@
             <input type="password" placeholder="Enter Password" name="psw" required>
 
             <button type="submit" id="log" name="log">Log in</button>
+
+            <h6>If you don't have an account, <a href="signup.php">Sign up</a></h6> 
           </form>
         </div>
       </section>

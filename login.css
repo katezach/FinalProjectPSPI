@@ -30,7 +30,7 @@ body, html {
     float: left;
     margin-top: 200px;
     margin-left: 100px;
-    max-width: 300px;
+    max-width: 310px;
     padding: 20px;
     background-color: rgb(130, 209, 141, 0.8);
 } 
@@ -57,6 +57,19 @@ h2{
     margin-bottom: 20px  !important;
     color: black;
     font-weight: bold !important;
+}
+h6{
+    padding-top: 15px;
+    font-size: 16px ;
+    font-weight: bold ;
+    color: black ;
+}
+a{
+    color: black !important;
+    text-decoration: underline !important;
+}
+a:hover{
+    color: rgb(44, 44, 44) !important;
 }
 /* Set a style for the submit button */
 button {
