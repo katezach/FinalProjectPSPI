@@ -13,7 +13,7 @@
         echo "<script> location.href='index.php'; </script>"; 
     }else{
         echo '<script>alert("The profile has been deleted successfully!")</script>';
-        echo "<script> location.href='general_profile.php'; </script>";   
+        echo "<script> location.href='profile.php'; </script>";   
     }
 
     mysqli_close($link);

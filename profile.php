@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <?php session_start(); ?>
-  <head>
-  <!--Title and favicon-->
+<?php session_start(); ?>
+<head>
+    <!--Title and favicon-->
     <title>Profile | Goal City</title>
     <link rel="icon" type="image/png" sizes="32x32" href="media/withoutString.png">
 
@@ -21,55 +21,56 @@
 
     <!--Social Media Icons-->
     <script src="https://kit.fontawesome.com/9832cc157c.js" crossorigin="anonymous"></script>
-  </head>
+</head>
 
-  <body>
+<body>
+      
     <!--Navbar and welcome-->
     <div class="topnav">
-      <a href="insidepage.php">
-        <img src="media/logo.png" alt="Logo" height="110px" width="100px">
-      </a>
+        <a href="insidepage.php">
+            <img src="media/logo.png" alt="Logo" height="110px" width="100px">
+        </a>
 
-      <div class="topnav-right">
-        <div class="dropdown-username">
-          <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user']; ?></button>
-          <div id="myDropdown" class="dropdown-content">
-            <a id="profile">My Profile</a>
-            <a id="home" href="insidepage.php">Home</a>
-            <a id="quiz" href="quiz.php">Quiz</a>
-            <a id="volun" href="volunteer.php">Volunteer</a>
-            <a id ="logout" href="index.php">Log out</a>
-          </div>
-        </div>
+        <div class="topnav-right">
+            <div class="dropdown-username">
+            <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user'] , '<i class="fas fa-caret-down" style="float:right;margin-left:110px;margin-top:-20px"></i>' ; ?></button>
+            <div id="myDropdown" class="dropdown-content">
+                <a id="profile">My Profile</a>
+                <a id="home" href="insidepage.php">Home</a>
+                <a id="quiz" href="quiz.php">Quiz</a>
+                <a id="volun" href="volunteer.php">Volunteer</a>
+                <a id ="logout" href="index.php">Log out</a>
+            </div>
+            </div>
 
-        <script>
-          /* When the user clicks on the button, 
-          toggle between hiding and showing the dropdown content */
-          function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-          }
-
-          // Close the dropdown if the user clicks outside of it
-          window.onclick = function(event) {
-            if (!event.target.matches('.dropbtn')) {
-              var dropdowns = document.getElementsByClassName("dropdown-content-username");
-              var i;
-              for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                  openDropdown.classList.remove('show');
-                }
-              }
+            <script>
+            /* When the user clicks on the button, 
+            toggle between hiding and showing the dropdown content */
+            function myFunction() {
+                document.getElementById("myDropdown").classList.toggle("show");
             }
-          }
-        </script>  
-      </div>
+
+            // Close the dropdown if the user clicks outside of it
+            window.onclick = function(event) {
+                if (!event.target.matches('.dropbtn')) {
+                var dropdowns = document.getElementsByClassName("dropdown-content-username");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                    }
+                }
+                }
+            }
+            </script>  
+        </div>
     </div>
 
     <hr>
     <h1>Welcome <?php echo $_SESSION['user'];?> ! </h1>
     <br>
-    
+
     <!--First Collapsed list-->
     <button class="collapsible" style="margin-top:20px;"><i>Edit your account</i></button>
     <div class="content">
@@ -105,7 +106,14 @@
     </div>
 
     <!--Second Collapsed list-->
-    <button class="collapsible"><i>Show your mailbox</i></button>
+    <?php 
+        include('isadmin.php');
+        if($printadmins){
+            echo '<button class="collapsible"><i>Show webpage\'s mailbox</i></button>';
+        }else{
+            echo '<button class="collapsible"><i>Show your mailbox</i></button>';
+        }
+    ?>
     <div class="content">
       <div class="mailbox-wrapper ">
         <div class="row" >
@@ -122,15 +130,22 @@
               document.getElementById("load_mails").innerHTML=xmlhttp.responseText;
             }
           };
-          xmlhttp.open("GET","load_mails_user.php",true);
+          xmlhttp.open("GET","load_mails.php",true);
           xmlhttp.send(null);
         }
         load_mailbox();
       </script>
     </div>
 
+    <?php 
+        include('isadmin.php');
+        if($printadmins){
+            echo '<button class="collapsible"><i>Delete an account</i></button>';
+        }else{
+            echo '<button class="collapsible"><i>Delete your account</i></button>';
+        }
+    ?>
     <!--Third Collapsed list-->
-    <button class="collapsible"><i>Delete your account</i></button>
     <div class="content">
       <div class="delete-wrapper">
           <div class="row">
@@ -147,7 +162,7 @@
               document.getElementById("delete_mails").innerHTML=xmlhttp.responseText;
             }
           };
-          xmlhttp.open("GET","delete_account_user.php",true);
+          xmlhttp.open("GET","delete_account.php",true);
           xmlhttp.send(null);
         }
         delete_mails();
@@ -212,5 +227,6 @@
       </footer>
     </section>
 
-  </body>
+</body>
 </html>
+    

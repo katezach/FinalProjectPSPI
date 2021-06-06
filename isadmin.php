@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include('SQL_connection.php'); 
 
     $username = $_SESSION['user'];
@@ -9,10 +8,9 @@
     $row = mysqli_fetch_array($result);
 
     if($row['isadmin'] == 1){
-        echo "<script> location.href='profile_admin.php'; </script>";
+        $printadmins = 1;
     }else{
-        echo "<script> location.href='profile_user.php'; </script>";
+        $printadmins = 0; 
     }
 
-    mysqli_close($link);
 ?>
