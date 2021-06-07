@@ -31,6 +31,7 @@
                 </div>
             </div>
             <div class="row">
+                <?php $ch=$_GET["choice"];?>
                 <div class="col-md-12" id="load_questions"></div>
             </div>
             <div class="row" style="margin-top:50px; float:right;">
@@ -50,9 +51,10 @@
                 document.getElementById("total_que").innerHTML=9;
             }
             var qid="1";
-            load_questions(qid);
+            var choice = "<?php echo "$ch";?>";
+            load_questions(choice,qid);
 
-            function load_questions(qid){
+            function load_questions(choice,qid){
                 document.getElementById("current_que").innerHTML=qid;
                 var xmlhttp=new XMLHttpRequest();
                 xmlhttp.onreadystatechange=function(){
@@ -61,7 +63,7 @@
                         load_total();
                     }
                 };
-                xmlhttp.open("GET","load_questions.php?qid="+qid,true);
+                xmlhttp.open("GET","load_questions.php?choice="+choice+"&qid="+qid,true);
                 xmlhttp.send(null);
             }
             //onClick method to save radio button value.
@@ -74,24 +76,23 @@
             function load_previous(){
                 //If it's the first question, previous button cannot be pressed. If not, load previous.
                 if(qid=="1"){
-                    load_questions(qid);
+                    load_questions(choice,qid);
                 }
                 else{
                     qid=eval(qid)-1;
-                    load_questions(qid);
+                    load_questions(choice,qid);
                 }
             }
             function load_next(){
                 //Checks if it is the last question, if not loads next question.
                 if(qid!=document.getElementById("total_que").innerHTML){
                     qid=eval(qid)+1;
-                    load_questions(qid);
+                    load_questions(choice,qid);
                 }else
                     load_score();
             }
-            function load_score()
-            {
-                window.location="score.php";
+            function load_score(){
+                window.location="score.php?choice="+choice;
             }
         </script>
     </body>

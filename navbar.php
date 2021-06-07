@@ -3,6 +3,7 @@
 <?php 
   $uri = $_SERVER["REQUEST_URI"];
   $cur = substr($uri,strpos($uri,"/")+1);
+  
 ?>
 
 <nav class="navbar navbar-inverse">
@@ -73,35 +74,35 @@
 
         <?php 
           if($cur == 'FinalProjectPSPI/quiz.php' || $cur == 'FinalProjectPSPI/volunteer.php' ){
-          echo '<li class="dropdown"><a style = "color: grey;">Extra Activities</a>
+          ?><li class="dropdown"><a style = "color: grey;">Extra Activities</a>
             <div class="dropdown-content">
               <a>Take a quiz<i class="fas fa-caret-down" style="float:right;margin-left:10px;margin-top:5%"></i></a>
               <div class="dropdown-forextra">
               <ul>
-                <li><a href="quiz.php">Quiz 1</a></li>
-                <li><a href="#">Quiz 2</a></li>
-                <li><a href="#">Quiz 3</a></li>
+                <?php $choice=""; ?>
+                <li><a href="quiz.php?choice=<?php echo "first";?>">Quiz 1</a></li>
+                <li><a href="quiz.php?choice=<?php echo "second";?>">Quiz 2</a></li>
+                <li><a href="quiz.php?choice=<?php echo "third";?>">Quiz 3</a></li>
               </ul>
               </div>
               <a href="volunteer.php">Volunteering</a>
             </div>
-            </li>' ;
-          }else{
-            echo '<li class="dropdown"><a>Extra Activities</a>
+            </li><?php
+          }else{ ?>
+            <li class="dropdown"><a>Extra Activities</a>
             <div class="dropdown-content">
               <a>Take a quiz<i class="fas fa-caret-down" style="float:right;margin-left:10px;margin-top:5%"></i></a>
               <div class="dropdown-forextra">
               <ul>
-                <li><a href="quiz.php">Quiz 1</a></li>
-                <li><a href="#">Quiz 2</a></li>
-                <li><a href="#">Quiz 3</a></li>
+                <li><a href="quiz.php?choice=<?php echo "first";?>">Quiz 1</a></li>
+                <li><a href="quiz.php?choice=<?php echo "second";?>">Quiz 2</a></li>
+                <li><a href="quiz.php?choice=<?php echo "third";?>">Quiz 3</a></li>
               </ul>
               </div>
               <a href="volunteer.php">Volunteering</a>
             </div>
-            </li>' ;
-          }
-        ?>
+            </li>
+          <?php } ?>
         
       </ul>
 

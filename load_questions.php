@@ -20,13 +20,19 @@
     $counter=0;
     $ans="";
     
+    $ch= $_GET["choice"];
     
     /* Gives ans the chosen value */
     if(isset($_SESSION["answer"][$_GET["qid"]])){
         $ans=$_SESSION["answer"][$_GET["qid"]];
     }
 
-    $query = "SELECT * FROM quiz1 WHERE idquiz='$_GET[qid]'"; 
+    if($ch == "first")
+        $query = "SELECT * FROM quiz1 WHERE idquiz='$_GET[qid]'"; 
+    else if($ch =="second")
+        $query = "SELECT * FROM quiz2 WHERE idquiz='$_GET[qid]'";
+    else 
+        $query = "SELECT * FROM quiz3 WHERE idquiz='$_GET[qid]'";
     $result=mysqli_query($link,$query);
     $counter=mysqli_num_rows($result); 
 

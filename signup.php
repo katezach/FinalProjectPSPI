@@ -12,13 +12,14 @@
         <link rel="stylesheet" href="signup.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" 
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        
     </head>
 
     <body>
         <div class="bg-img">
             <section id="signup">
                 <a href="index.php">
-                    <img src="media/logo.png" alt="Logo" height="80px" width="80px" style="float: left; padding: 14px 16px; text-decoration: none; background-color: white;">
+                    <img src="media/logo.png" alt="Logo" height="110px" width="100px" style="float:left; padding:14px 16px;text-decoration:none;background-color: white;">
                 </a>
                 <div class="signup-wrapper">
                     <form action="register.php" id='register' class="form-horizontal" method="post">

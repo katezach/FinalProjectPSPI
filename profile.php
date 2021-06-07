@@ -28,7 +28,7 @@
     <!--Navbar and welcome-->
     <div class="topnav">
         <a href="insidepage.php">
-            <img src="media/logo.png" alt="Logo" height="110px" width="100px">
+            <img src="media/logo.png" alt="Logo" height="90px" width="80px">
         </a>
 
         <div class="topnav-right">
@@ -109,7 +109,7 @@
     <?php 
         include('isadmin.php');
         if($printadmins){
-            echo '<button class="collapsible"><i>Show webpage\'s mailbox</i></button>';
+            echo '<button class="collapsible"><i>Show website\'s mailbox</i></button>';
         }else{
             echo '<button class="collapsible"><i>Show your mailbox</i></button>';
         }
