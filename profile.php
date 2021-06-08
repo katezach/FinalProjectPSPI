@@ -36,8 +36,15 @@
             <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user'] , '<i class="fas fa-caret-down" style="float:right;margin-left:110px;margin-top:-20px"></i>' ; ?></button>
             <div id="myDropdown" class="dropdown-content">
                 <a id="profile">My Profile</a>
-                <a id="home" href="insidepage.php">Home</a>
-                <a id="quiz" href="quiz.php">Quiz</a>
+                <a id="quiz">Take a quiz<i class="fas fa-caret-down" style="float:right;margin-left:10px;margin-top:5%"></i></a>
+                <div class="dropdown-forextra">
+                <ul>
+                  <li><a href="quiz.php?choice=<?php echo "first";?>">Quiz 1</a></li>
+                  <li><a href="quiz.php?choice=<?php echo "second";?>">Quiz 2</a></li>
+                  <li><a href="quiz.php?choice=<?php echo "third";?>">Quiz 3</a></li>
+                </ul>
+                </div>
+
                 <a id="volun" href="volunteer.php">Volunteer</a>
                 <a id ="logout" href="index.php">Log out</a>
             </div>

@@ -38,7 +38,7 @@ body {
     z-index: 1;
 }
 .topnav-right .dropdown-username .dropdown-content #profile  {
-    color: black;
+    color: rgb(88, 86, 86);
     padding: 12px 21px;
     text-decoration: none;
     display: block;
@@ -49,15 +49,10 @@ body {
     text-decoration: none;
     display: block;
 }
-.topnav-right .dropdown-username .dropdown-content #home  {
-    color: black;
-    padding: 12px 37px;
-    text-decoration: none;
-    display: block;
-}
+
 .topnav-right .dropdown-username .dropdown-content #quiz  {
     color: black;
-    padding: 12px 42px;
+    padding: 12px 5px;
     text-decoration: none;
     display: block;
 }
@@ -70,6 +65,24 @@ body {
 .dropdown-content a:hover {background-color: whitesmoke;}
 .dropdown-content {display: block;}
 .dropbtn {background-color: gray;}
+
+ .dropdown-forextra{
+    display: none;
+ }
+ .dropdown-forextra ul a{
+    margin-left: -50%;
+    padding-right: 65%;
+    color: black;
+    background-color: rgb(119, 207, 119);
+ }
+ .dropdown-content:hover .dropdown-forextra {
+     display: block;  
+  }
+ .dropdown-forextra ul,.dropdown-forextra a:hover{
+    display: block;
+    list-style-type: none;
+  }
+ 
 
 /*Username button*/
 .btn-primary {
