@@ -137,6 +137,32 @@
       </script>
     </div>
 
+    <!--Third Collapsed list-->
+    <button class="collapsible"><i>Show website's scoreboard</i></button>
+    <div class="content">
+      <div class="mailbox-wrapper ">
+        <div class="row" >
+          <div class="col-md-12" id="load_scores"></div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+        function load_scoreboard()
+        {
+          var xmlhttp=new XMLHttpRequest();
+          xmlhttp.onreadystatechange=function(){
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+              document.getElementById("load_scores").innerHTML=xmlhttp.responseText;
+            }
+          };
+          xmlhttp.open("GET","load_scoreboard.php",true);
+          xmlhttp.send(null);
+        }
+        load_scoreboard();
+      </script>
+    </div>
+
+    <!--Fourth Collapsed list-->
     <?php 
         include('isadmin.php');
         if($printadmins){
@@ -145,7 +171,6 @@
             echo '<button class="collapsible"><i>Delete your account</i></button>';
         }
     ?>
-    <!--Third Collapsed list-->
     <div class="content">
       <div class="delete-wrapper">
           <div class="row">
