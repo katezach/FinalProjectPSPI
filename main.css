@@ -64,12 +64,8 @@ head,body,footer{
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color: gray;}
 
-.dropdown-content .dropdown-forextra{
-   display: none;
-}
-.dropdown-content:hover .dropdown-forextra {
-    display: block;
- }
+.dropdown-content .dropdown-forextra{ display: none;}
+.dropdown-content:hover .dropdown-forextra { display: block;}
 .dropdown-forextra ul,.dropdown-forextra a:hover{
     list-style-type:lower-latin;
     background-color: rgb(119, 207, 119);
