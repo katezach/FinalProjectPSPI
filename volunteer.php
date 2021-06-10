@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <!--Title and favicon-->
   <title>Volunteering | Goal City</title>
@@ -25,52 +24,32 @@
     p    {color: black;}
     
     @media (max-width:280px){
-        .row{
-            margin-left: -100px;
-        }
+        .row{ margin-left: -100px;}
     }
     @media (min-width:450px) and (max-width:800px){
-        .row{
-            margin-left: 70px;
-        }
+        .row{  margin-left: 70px; }
     }
     @media (min-width:993px) and (max-width:1020px){
-        .row{
-            margin-left: 70px;
-        }
+        .row{ margin-left: 70px; }
     }
     @media (min-width:1230px) and (max-width:1500px){
-        .row{
-            margin-left: 120px;
-        }
+        .row{   margin-left: 120px;}
     }
     @media (min-width:300px) and (max-width:640px){
-        .card{
-            margin-left: 15%; margin-top: 30px; 
-        }
+        .card{ margin-left: 15%; margin-top: 30px; }
     }
     @media (min-width:640px) and (max-width:992px){
-        .card{
-            margin-left: 20%; margin-top: 70px; 
-        }
+        .card{  margin-left: 20%; margin-top: 70px; }
     }
     @media (min-width:1500px){
-        .card{
-            margin-left: 13%; width:440px;height:610px;
-        }
-        .card-img-top{
-            margin-top:10px;margin-left:12%;width: 300px;height: 300px;
-        }
-        .card-body{
-            margin-top:10%;margin-left: 10%;
-        }
+        .card{  margin-left: 13%; width:440px;height:610px;}
+        .card-img-top{  margin-top:10px;margin-left:12%;width: 300px;height: 300px;}
+        .card-body{ margin-top:10%;margin-left: 10%; }
         h5{font-size: 30px;}
         p{font-size: 20px;}
         .btn-success{margin-top:10%;margin-left:0px;width: 90%;font-size: 24px;}
     }
-
 </style>
-
 </head>
 <?php 
     $imageurls=array("volunteer_access.png","volunteer_housing.png","volunteer_heritage.png","volunteer_environment.png","volunteer_cooperation.png","volunteer_transportation.png");
@@ -86,7 +65,6 @@
     "https://www.un.org/en/about-us/how-to-donate-to-the-un-system","https://org.salsalabs.com/o/411/donate_page/bikesfortheworld");
 ?>
 <body>
-  
   <?php include('navbar.php') ?>
   <?php 
   echo "<div class='container-fluid'><div class='row'>";
@@ -102,8 +80,6 @@
     }
   ?>
   </div>
-
-
 </body>
 <?php include('footer.php') ?>
 </html>

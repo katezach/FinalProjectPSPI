@@ -47,13 +47,17 @@
         <?php include('footer.php');?>
 
         <script type="text/javascript">
+            //Passes the value of total questions in the <div id="total_que" ... >
+            //In our case, all quizes have 9 questions.
             function load_total(){
                 document.getElementById("total_que").innerHTML=9;
             }
-            var qid="1";
+            var qid="1"; //Start from the first question
             var choice = "<?php echo "$ch";?>";
             load_questions(choice,qid);
-
+            
+            //Loads the current question using the return value from load_questions.php where it sends the
+            //chosen quiz number and the id of the question that must be shown.
             function load_questions(choice,qid){
                 document.getElementById("current_que").innerHTML=qid;
                 var xmlhttp=new XMLHttpRequest();
@@ -70,7 +74,7 @@
             function radioclick(radioValue,qid) 
             {
                 var xmlhttp=new XMLHttpRequest();
-                xmlhttp.open("GET","save_answer.php?qid="+qid+"&first="+radioValue,true);
+                xmlhttp.open("GET","save_answer.php?qid="+qid+"&value="+radioValue,true);
                 xmlhttp.send(null);
             }
             function load_previous(){
@@ -91,6 +95,7 @@
                 }else
                     load_score();
             }
+            //Loads the score for the specific quiz
             function load_score(){
                 window.location="score.php?choice="+choice;
             }

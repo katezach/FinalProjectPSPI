@@ -56,12 +56,12 @@
                         $temp=2;
                     else if($_GET["choice"]=="third")
                         $temp=3;
-                    mysqli_query($link,"INSERT INTO `scores`(`Username`, `Score`, `no_of_quiz`) VALUES ('$_SESSION[user]','$correct / $total_que','$temp')"); 
+                    mysqli_query($link,"INSERT INTO `scores`(`Username`, `Score`, `no_of_quiz`) VALUES ('$_SESSION[user]','$correct / 9','$temp')"); 
                 ?>
                 <h1 style="justify-content:center; text-align:center;margin-top:80px;">You are done!</h1><br>
-                <h1 style='justify-content:center; text-align:center;margin-top:30px;'>You've reached <?php echo $correct ?> / <?php echo $total_que ." ." ?></h1>
+                <h1 style='justify-content:center; text-align:center;margin-top:30px;'>You've reached <?php echo $correct ?> / <?php echo "9 ." ?></h1>
                 <?php 
-                    if(($correct/$total_que)*100>=50)
+                    if(($correct/9)*100>=50)
                         echo "<h1 style='justify-content:center; text-align:center;'>Great job!</h1><br>";
                     else
                         echo "<h1 style='justify-content:center; text-align:center;'>Maybe you should try again!</h1><br>";?>
@@ -79,8 +79,6 @@
     
     <?php include('footer.php');?>
     <script type="text/javascript">
-        //should erase the given answers
-        
         function load_total(){  
             var choice = "<?php echo "$ch";?>";
             window.location="quiz.php?choice="+choice;
