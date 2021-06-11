@@ -24,7 +24,13 @@
 
 <body>
 
-  <?php session_start(); ?>
+  <?php session_start(); 
+    
+   if($_SESSION['logged']==0){
+    echo $_SESSION['logged'];
+    echo "<script> location.href='login.php'; </script>";
+  }
+  ?>
 
   <!--Navigation Bar-->
   <div class="topnav">
@@ -36,7 +42,7 @@
         <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user'] , '<i class="fas fa-caret-down" style="float:right;margin-left:110px;margin-top:-20px"></i>' ;  ?></button>
         <div id="myDropdown" class="dropdown-content">
           <a id="profile" href="profile.php">My Profile</a>
-          <a id="logout" href="index.php">Log out</a>
+          <a id="logout" href="index.php?from=<?php echo "out";?>">Log out</a></li>
         </div>
       </div>
 

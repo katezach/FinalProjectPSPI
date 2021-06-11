@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php session_start(); ?>
 
   <head>
     <!--Title and favicon-->
@@ -18,6 +19,23 @@
   </head>
 
   <body>
+    <?php
+
+      if($_SESSION['logged']!=1){
+
+      }
+       
+      else{
+       
+        $from=$_GET["from"];
+
+        if($from=="out"){
+          $_SESSION['logged']=0;
+        }
+
+
+       }
+    ?>
     <!--Navigation Bar-->
     <div class="topnav">
       <a href="index.php">

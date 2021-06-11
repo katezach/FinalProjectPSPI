@@ -5,7 +5,12 @@
   $cur = substr($uri,strpos($uri,"/")+1);
   
 ?>
-
+<?php  
+ if($_SESSION['logged']==0){
+    echo $_SESSION['logged'];
+    echo "<script> location.href='login.php'; </script>";
+  }
+?>
 <nav class="navbar navbar-inverse">
   <div class="container-fluid cfirst">
     <div class="navbar-header">
@@ -110,7 +115,7 @@
         <button onclick="myFunction()" class="btn-primary"><?php echo $_SESSION['user'] , '<i class="fas fa-caret-down" style="float:right;margin-left:10px;margin-top:5px"></i>' ;  ?></button>
         <div id="myDropdown" class="dropdown-content">
           <a href="profile.php">My Profile</a>
-          <a href="index.php">Log out</a>
+          <a id="logout" href="index.php?from=<?php echo "out";?>">Log out</a></li>
         </div>
       </div>
 

@@ -20,6 +20,7 @@
             echo "<script> location.href='login.php'; </script>";
             exit;
         }else{
+            $_SESSION['logged'] = 1;
             echo "<script> location.href='insidepage.php'; </script>";
         }
 

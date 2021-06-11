@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html>
-<?php session_start(); ?>
+<?php session_start(); 
+if($_SESSION['logged']==0){
+  echo $_SESSION['logged'];
+  echo "<script> location.href='login.php'; </script>";
+}
+?>
 <head>
     <!--Title and favicon-->
     <title>Profile | Goal City</title>
@@ -46,7 +51,7 @@
                 </div>
 
                 <a id="volun" href="volunteer.php">Volunteer</a>
-                <a id ="logout" href="index.php">Log out</a>
+                <a id="logout" href="index.php?from=<?php echo "out";?>">Log out</a></li>
             </div>
             </div>
 
