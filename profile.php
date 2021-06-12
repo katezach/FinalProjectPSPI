@@ -2,7 +2,6 @@
 <html>
 <?php session_start(); 
 if($_SESSION['logged']==0){
-  echo $_SESSION['logged'];
   echo "<script> location.href='login.php'; </script>";
 }
 ?>

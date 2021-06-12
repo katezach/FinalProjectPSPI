@@ -19,23 +19,22 @@
   </head>
 
   <body>
+    
     <?php
 
-      if($_SESSION['logged']!=1){
+      if(!isset($_SESSION['logged'])){
 
-      }
-       
-      else{
-       
-        $from=$_GET["from"];
+      }else{
+        if($_SESSION['logged']==1){
+          $from=$_GET["from"];
 
-        if($from=="out"){
-          $_SESSION['logged']=0;
+          if($from=="out"){
+            $_SESSION['logged']=0;
+          }
         }
-
-
-       }
+      }
     ?>
+
     <!--Navigation Bar-->
     <div class="topnav">
       <a href="index.php">

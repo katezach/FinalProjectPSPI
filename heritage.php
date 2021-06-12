@@ -30,7 +30,7 @@
       </div>
       <div class="image-border2 col-md-6">
         <img src="media/frank-mckenna-4V8JxijgZ_c-unsplash.jpg" alt="Sunset" width="100%"></img>
-        <h1 style="margin-top: -50px;margin-left: 62%;color:white">Natural Heritage</h1>
+        <h1 style="margin-top: -50px;margin-left: 60%;color:white">Natural Heritage</h1>
       </div>
     </div>
   </div>
